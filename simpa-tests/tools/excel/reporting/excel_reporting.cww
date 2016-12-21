@@ -114,7 +114,7 @@
     <WINDOW>
         <SESSION>-1</SESSION>
         <EDOCTYPE>1</EDOCTYPE>
-        <PATH USERELATIVEPATHS = "true">src\main.c</PATH>
+        <PATH USERELATIVEPATHS = "true">src\simpa.hit.main.c</PATH>
         <FRAMELOC>
             <X>8</X>
             <Y>27</Y>
@@ -384,7 +384,7 @@
             </GROUPID>
         </DOCKINFO>
         <DEBUGCONTEXT>GlobalSession, cpux86, osWin32</DEBUGCONTEXT>
-        <DEBUGTARGETNAME>D:\cygwin\usr\local\qa\compiler_validation\tools\excel\reporting\xml_hist.exe</DEBUGTARGETNAME>
+        <DEBUGTARGETNAME>D:\cygwin\usr\local\qa\compiler_validation\simpa.hit.simpa.drivergen.tools\excel\reporting\xml_hist.exe</DEBUGTARGETNAME>
     </WINDOW>
     <WINDOW>
         <SESSION>-2147483648</SESSION>

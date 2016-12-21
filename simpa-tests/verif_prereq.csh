@@ -24,7 +24,7 @@ else if (! -x /usr/bin/tcsh) then
 endif
 
 # ---------------------------------------
-# We verify if required tools exist
+# We verify if required simpa.hit.simpa.drivergen.tools exist
 
 foreach tool (gmake egrep perl)
   which "${tool}" >& /dev/null

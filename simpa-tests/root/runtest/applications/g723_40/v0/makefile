@@ -39,7 +39,7 @@ DEC_SRC =\
 
 
 COMMON_SRC = \
-	common/main.c\
+	common/simpa.hit.main.c\
 	common/perf_table.c\
 	common/g711.c\
 	common/g72x.c\

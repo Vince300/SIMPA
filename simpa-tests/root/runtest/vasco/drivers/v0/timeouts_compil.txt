@@ -1,2 +1,2 @@
-main/simpa/SIMPA ; 18000
+simpa.hit.main/simpa/SIMPA ; 18000
 

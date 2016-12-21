@@ -9,7 +9,7 @@ Options
 	--help | -h   : Show help
 	--seed        : Use NN as seed for random generator
 	--loadDotFile : load the specified dot file
-	                 use with drivers.mealy.FromDotMealyDriver
+	                 use with simpa.hit.drivers.mealy.FromDotMealyDriver
 	--interactive : algorithms may ask user to choose a sequence, 
 	                 a counter example or something else
 	
@@ -20,7 +20,7 @@ Options
 	--cutCombinatorial : use the combinatorial inference with cutting
 	--combinatorial    : use the combinatorial inference
 	--rivestSchapire   : use the RivestSchapire inference 
-	                     (must be used with an other learner)
+	                     (must be used with an other simpa.hit.learner)
 	                     This option let you to run an inference algorithm 
 	                     with resets on a driver without reset.
 > Algorithm ZQ
@@ -54,7 +54,7 @@ Options
 	--generic         : Use generic driver
 	--scan            : Use scan driver
 	--reuseop         : Reuse output parameter for non closed row
-	--forcej48        : Force the use of J48 algorithm instead of M5P 
+	--forcej48        : Force the use of J48 algorithm instead of M5P
 	                     for numeric classes
 	--weka            : Force the use of weka
 	--supportmin (20) : Minimal support for relation (1-100)
@@ -81,7 +81,7 @@ Options
 > Stats
 	--nbtest (1) : number of execution of the algorithm
 	--makeGraph  : create graph based on csv files
-	--stats      : enable stats mode
+	--simpa.hit.stats      : enable simpa.hit.stats mode
 	                - save results to csv
 	                - disable some feature
 	                
@@ -99,5 +99,5 @@ Options
 	         	usage : '--urls url1;url2' or '--urls url1 --urls url2'
 	--xss  : Detect XSS vulnerability
 
-Ex: SIMPA drivers.efsm.NSPKDriver --outdir mydir --text
+Ex: SIMPA simpa.hit.drivers.efsm.NSPKDriver --outdir mydir --text
 

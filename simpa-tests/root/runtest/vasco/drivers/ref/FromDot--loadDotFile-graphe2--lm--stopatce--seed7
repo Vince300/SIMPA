@@ -1,6 +1,6 @@
 
 Checking environment and options
-you can try to do this learning again by running something like 'java main.simpa.SIMPA drivers.mealy.FromDotMealyDriver --loadDotFile ../inputs/ok_graphe2.dot --lm --stopatce --html --text --seed 7 '
+you can try to do this learning again by running something like 'java simpa.hit.main.simpa.SIMPA simpa.hit.drivers.mealy.FromDotMealyDriver --loadDotFile ../inputs/ok_graphe2.dot --lm --stopatce --html --text --seed 7 '
 System : G
 Inferring the system
 Building the conjecture

@@ -209,7 +209,7 @@ objects.
 The quick answer is because they are easy to implement yourself. The long
 answer is that to write these in such a way that multiple platforms are
 supported correctly would just require too much code. Below are
-some examples how you can implement these yourself.
+some simpa.hit.examples how you can implement these yourself.
 
 sub mput {
   my($ftp,$pattern) = @_;

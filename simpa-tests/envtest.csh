@@ -1,6 +1,6 @@
 #!/usr/bin/tcsh -vx
 
-setenv QA_TOOLS        "$HOME/simpa-tests/tools"
+setenv QA_TOOLS        "$HOME/simpa-tests/simpa.hit.simpa.drivergen.tools"
 setenv QA_ROOT     "$HOME/simpa-tests/root"
 setenv NEW_QA_ROOT     "$HOME/simpa-tests/root"
 setenv PATH "${QA_TOOLS}:${PATH}"

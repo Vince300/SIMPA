@@ -6,7 +6,7 @@
                                 g721_encoder`_g721_encoder        0        0        0      188          26      111        0      111        0
                                       decode`_unpack_input        0        0        0      128          27       27        0       48        0
                                 g721_decoder`_g721_decoder        0        0        0      178          26      106        0      106        0
-                                                main`_main        0        0        0      148           1      428        0      428        0
+                                                simpa.hit.main`_main        0        0        0      148           1      428        0      428        0
                                             encode`_encode        1      160        0        0           1      633        0      633        0
                                             decode`_decode        1      134        0        0           1      547        0      547        0
                                          g711`_ulaw2linear        0        0        0       48          52       19        0       19        0

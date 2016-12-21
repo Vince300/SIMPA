@@ -57,7 +57,7 @@ CFILES = $(CYACC1) \
 	 $(SRC_DIR)/compiler_support.c \
 	 $(SRC_DIR)/qa_xml.c \
 	 $(SRC_DIR)/cmp_out.c \
-	 $(SRC_DIR)/main.c
+	 $(SRC_DIR)/simpa.hit.main.c
 
 CHEADERS = $(SRC_DIR)/util.h \
 	   $(SRC_DIR)/common_yacc_lex.h \

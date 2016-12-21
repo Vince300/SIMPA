@@ -1,6 +1,6 @@
 
 Checking environment and options
-you can try to do this learning again by running something like 'java main.simpa.SIMPA drivers.mealy.transparent.CounterMealyDriver --noReset --noSpeedUp --characterizationSeq j,j,i --html --text --seed 5 '
+you can try to do this learning again by running something like 'java simpa.hit.main.simpa.SIMPA simpa.hit.drivers.mealy.transparent.CounterMealyDriver --noReset --noSpeedUp --characterizationSeq j,j,i --html --text --seed 5 '
 System : Combined(Counter(3);Counter(2))
 Inferring the system with W=[jji] and n=6
 New state discovered : S0 (j/NoReset j/NoReset i/NoReset , )

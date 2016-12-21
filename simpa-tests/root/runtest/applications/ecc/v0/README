@@ -1,5 +1,5 @@
 for tested compiler, there are some modification
-1. the main function is midified to encode();decode(); need not user interactive.  
+1. the simpa.hit.main function is midified to encode();decode(); need not user interactive.
 2. get data from stdin ---> get data from array
 3. put data to stdout  ---> if _GENREF, put the data to data.h 
 else compare the result with expected result( a array in data.h), if success, printf PASSED, else FAILED.

@@ -2,7 +2,7 @@
 Checking environment and options
 [+] Testing 5 automaton
 	1/5
-you can try to do this learning again by running something like 'java main.simpa.SIMPA drivers.mealy.transparent.RandomAndCounterMealyDriver --noReset --minstates 2 --maxstates 3 --mininputsym 2 --maxinputsym 2 --minoutputsym 2 --maxoutputsym 3 --html --text --seed -2335527263009067485 '
+you can try to do this learning again by running something like 'java simpa.hit.main.simpa.SIMPA simpa.hit.drivers.mealy.transparent.RandomAndCounterMealyDriver --noReset --minstates 2 --maxstates 3 --mininputsym 2 --maxinputsym 2 --minoutputsym 2 --maxoutputsym 3 --html --text --seed -2335527263009067485 '
 System : Combined(Counter(3);Connex(Random(90)))
 Inferring the system with W=[a, countercounter] and n=6
 New state discovered : S0 (a/0 , counter/NoReset counter/NoReset , )
@@ -15,7 +15,7 @@ info: AdenilsoSimaoTool 'n-complete-exhaustive' tool is missing, the minLengthFo
 The computed conjecture is exact
 End
 	2/5
-you can try to do this learning again by running something like 'java main.simpa.SIMPA drivers.mealy.transparent.RandomAndCounterMealyDriver --noReset --minstates 2 --maxstates 3 --mininputsym 2 --maxinputsym 2 --minoutputsym 2 --maxoutputsym 3 --html --text --seed 7296960646242726244 '
+you can try to do this learning again by running something like 'java simpa.hit.main.simpa.SIMPA simpa.hit.drivers.mealy.transparent.RandomAndCounterMealyDriver --noReset --minstates 2 --maxstates 3 --mininputsym 2 --maxinputsym 2 --minoutputsym 2 --maxoutputsym 3 --html --text --seed 7296960646242726244 '
 System : Combined(Counter(3);Connex(Random(90)))
 Inferring the system with W=[a, countercounter] and n=6
 New state discovered : S0 (a/1 , counter/NoReset counter/NoReset , )
@@ -28,11 +28,11 @@ info: AdenilsoSimaoTool 'n-complete-exhaustive' tool is missing, the minLengthFo
 The computed conjecture is exact
 End
 	3/5
-you can try to do this learning again by running something like 'java main.simpa.SIMPA drivers.mealy.transparent.RandomAndCounterMealyDriver --noReset --minstates 2 --maxstates 3 --mininputsym 2 --maxinputsym 2 --minoutputsym 2 --maxoutputsym 3 --html --text --seed -8938777779763670796 '
+you can try to do this learning again by running something like 'java simpa.hit.main.simpa.SIMPA simpa.hit.drivers.mealy.transparent.RandomAndCounterMealyDriver --noReset --minstates 2 --maxstates 3 --mininputsym 2 --maxinputsym 2 --minoutputsym 2 --maxoutputsym 3 --html --text --seed -8938777779763670796 '
 System : Combined(Counter(3);Connex(Random(90)))
 End
 	4/5
-you can try to do this learning again by running something like 'java main.simpa.SIMPA drivers.mealy.transparent.RandomAndCounterMealyDriver --noReset --minstates 2 --maxstates 3 --mininputsym 2 --maxinputsym 2 --minoutputsym 2 --maxoutputsym 3 --html --text --seed -2406887219999847078 '
+you can try to do this learning again by running something like 'java simpa.hit.main.simpa.SIMPA simpa.hit.drivers.mealy.transparent.RandomAndCounterMealyDriver --noReset --minstates 2 --maxstates 3 --mininputsym 2 --maxinputsym 2 --minoutputsym 2 --maxoutputsym 3 --html --text --seed -2406887219999847078 '
 System : Combined(Counter(3);Connex(Random(90)))
 Inferring the system with W=[b, countercounter] and n=6
 New state discovered : S0 (b/1 , counter/NoReset counter/NoReset , )
@@ -45,7 +45,7 @@ info: AdenilsoSimaoTool 'n-complete-exhaustive' tool is missing, the minLengthFo
 The computed conjecture is exact
 End
 	5/5
-you can try to do this learning again by running something like 'java main.simpa.SIMPA drivers.mealy.transparent.RandomAndCounterMealyDriver --noReset --minstates 2 --maxstates 3 --mininputsym 2 --maxinputsym 2 --minoutputsym 2 --maxoutputsym 3 --html --text --seed 1747934843367763354 '
+you can try to do this learning again by running something like 'java simpa.hit.main.simpa.SIMPA simpa.hit.drivers.mealy.transparent.RandomAndCounterMealyDriver --noReset --minstates 2 --maxstates 3 --mininputsym 2 --maxinputsym 2 --minoutputsym 2 --maxoutputsym 3 --html --text --seed 1747934843367763354 '
 System : Combined(Counter(3);Connex(Random(90)))
 Inferring the system with W=[a, ba, countercounter] and n=9
 New state discovered : S0 (a/0 , b/1 a/0 , counter/NoReset counter/NoReset , )

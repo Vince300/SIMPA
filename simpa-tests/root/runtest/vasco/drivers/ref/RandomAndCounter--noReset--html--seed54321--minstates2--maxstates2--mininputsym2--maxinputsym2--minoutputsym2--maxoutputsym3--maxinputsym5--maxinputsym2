@@ -1,6 +1,6 @@
 
 Checking environment and options
-you can try to do this learning again by running something like 'java main.simpa.SIMPA drivers.mealy.transparent.RandomAndCounterMealyDriver --noReset --minstates 2 --maxstates 2 --mininputsym 2 --maxinputsym 2 --minoutputsym 2 --maxoutputsym 3 --maxinputsym 5 --maxinputsym 2 --html --text --seed 54321 '
+you can try to do this learning again by running something like 'java simpa.hit.main.simpa.SIMPA simpa.hit.drivers.mealy.transparent.RandomAndCounterMealyDriver --noReset --minstates 2 --maxstates 2 --mininputsym 2 --maxinputsym 2 --minoutputsym 2 --maxoutputsym 3 --maxinputsym 5 --maxinputsym 2 --html --text --seed 54321 '
 System : Combined(Counter(3);Connex(Random(90)))
 Inferring the system with W=[b, countercounter] and n=6
 New state discovered : S0 (b/1 , counter/NoReset counter/NoReset , )

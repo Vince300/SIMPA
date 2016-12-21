@@ -878,7 +878,7 @@ if ( $?HELP ) then
     echo "The scenario <scenario_fname> is got in the '$QA_ROOT_STR/runtest/scenarios' folder."
     echo ''
     echo 'On Windows PC with -getqa and -qadrive parameters, the QA is updated from:'
-    echo '     /cygdrive/<the_qa_drive>/QA and /cygdrive/<the_qa_drive>/tools'
+    echo '     /cygdrive/<the_qa_drive>/QA and /cygdrive/<the_qa_drive>/simpa.hit.simpa.drivergen.tools'
     echo ''
     echo "With -getqa and -qastation parameters, the QA is updated from ${QA_USER}@<qastation>"
     echo ''
@@ -1508,7 +1508,7 @@ if ( ($GETQA == 1) && ! $SAME_STORAGE ) then
     if ( $?QADRIVE ) then
 	echo "Copy of the QA from ${QADRIVE}:"
 	pushd "${QA_TOOLS}" > /dev/null
-	tar cf - -C /cygdrive/${QADRIVE}/tools . | tar xvfBip - --ignore-failed-read | grep '/$'
+	tar cf - -C /cygdrive/${QADRIVE}/simpa.hit.simpa.drivergen.tools . | tar xvfBip - --ignore-failed-read | grep '/$'
 	popd > /dev/null
 	pushd "${TST_QA_ROOT}" > /dev/null
 	tar cf - -C /cygdrive/${QADRIVE}/QA runtest | tar xvfBip - --ignore-failed-read | grep '/$'

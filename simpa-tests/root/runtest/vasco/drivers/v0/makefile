@@ -25,29 +25,29 @@ BIN_DIR     := bin
 
 SIMPA_SRC := $(wildcard $(SRC_DIR)/*/*.java $(SRC_DIR)/*/*/*.java $(SRC_DIR)/*/*/*/*.java $(SRC_DIR)/*/*/*/*/*.java $(SRC_DIR)/*/*/*/*/*/*.java)
 
-# SIMPA_SRC   := $(foreach SDIR, automata crawler datamining detection drivers learner main stats tools ,$(wildcard $(SRC_DIR)/$(SDIR)/*.java $(SRC_DIR)/$(SDIR)/*/*.java $(SRC_DIR)/$(SDIR)/*/*/*.java $(SRC_DIR)/$(SDIR)/*/*/*/*.java $(SRC_DIR)/$(SDIR)/*/*/*/*/*.java ))
-# TARGETS_SRC := $(wildcard $(SRC_DIR)/drivers/*/*.java)
+# SIMPA_SRC   := $(foreach SDIR, simpa.hit.automata simpa.hit.simpa.drivergen.crawler simpa.hit.datamining simpa.hit.detection simpa.hit.drivers simpa.hit.learner simpa.hit.main simpa.hit.stats simpa.hit.simpa.drivergen.tools ,$(wildcard $(SRC_DIR)/$(SDIR)/*.java $(SRC_DIR)/$(SDIR)/*/*.java $(SRC_DIR)/$(SDIR)/*/*/*.java $(SRC_DIR)/$(SDIR)/*/*/*/*.java $(SRC_DIR)/$(SDIR)/*/*/*/*/*.java ))
+# TARGETS_SRC := $(wildcard $(SRC_DIR)/simpa.hit.drivers/*/*.java)
 
 
 ######################################################################
 ### NON GENERIC RULES
 
-all : main.simpa.SIMPA transparent.CounterMealyDriver transparent.CombinedMealyDriver transparent.RandomAndCounterMealyDriver
+all : simpa.hit.main.simpa.SIMPA transparent.CounterMealyDriver transparent.CombinedMealyDriver transparent.RandomAndCounterMealyDriver
 
-transparent.CounterMealyDriver : main.simpa.SIMPA
+transparent.CounterMealyDriver : simpa.hit.main.simpa.SIMPA
 
-transparent.CombinedMealyDriver : main.simpa.SIMPA
+transparent.CombinedMealyDriver : simpa.hit.main.simpa.SIMPA
                                        
-transparent.RandomAndCounterMealyDriver : main.simpa.SIMPA
+transparent.RandomAndCounterMealyDriver : simpa.hit.main.simpa.SIMPA
 
-main.simpa.SIMPA : $(SIMPA_SRC)
+simpa.hit.main.simpa.SIMPA : $(SIMPA_SRC)
 	javac -g -d bin $(SIMPA_SRC)
 
 
 
-main/simpa/SIMPA : $(BIN_DIR)/main/simpa/SIMPA.class
+simpa.hit.main/simpa/SIMPA : $(BIN_DIR)/simpa.hit.main/simpa/SIMPA.class
 
-$(BIN_DIR)/main/simpa/SIMPA.class :
+$(BIN_DIR)/simpa.hit.main/simpa/SIMPA.class :
 	javac -g -d bin $(SIMPA_SRC)
 
 

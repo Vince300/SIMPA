@@ -29,7 +29,7 @@ simpa_options = 	-s java
 
 # --------------------------- Standards -------------------------
 
-vasco/drivers/v0/		simpa_options
+vasco/simpa.hit.drivers/v0/		simpa_options
 
 
 

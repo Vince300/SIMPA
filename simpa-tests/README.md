@@ -15,9 +15,9 @@
 
 Now update the `$HOME/simpa-tests/envtest.csh` startup script to modify:
 the environment variable pointing to the root of the SIMPA sources (root containing drivergen, hit, ID3),
-the 3 environment variables that define where are the tests and their tools.
+the 3 environment variables that define where are the tests and their simpa.hit.simpa.drivergen.tools.
 	setenv SIMPA       "$HOME/simpa-clean"
-	setenv QA_TOOLS    "$HOME/simpa-tests/tools"
+	setenv QA_TOOLS    "$HOME/simpa-tests/simpa.hit.simpa.drivergen.tools"
 	setenv QA_ROOT     "$HOME/simpa-tests/root"
 	setenv NEW_QA_ROOT "$HOME/simpa-tests/root"`
 Then you must switch to the tcsh shell to define the environnement variables:
@@ -38,7 +38,7 @@ the number 3647 being the value of the counter incremented at each scenario exec
 **One specific test**
 For SIMPA, there is currently only one test : 
 	cd $NEW_QA_ROOT/runtest
-	cd vasco/drivers/v0
+	cd vasco/simpa.hit.drivers/v0
 	./run_all.pl -v tuesday
 The trace shows the shell command lines that can be used to replay the test.
 The local reports will be found in the reports directory:
@@ -59,10 +59,10 @@ One line must contain:
 	#coder;     dtx53mix.tin;    encoder 5.3;  -c -r53 -v dtx53mix.tin dtx53.xco  ; STDOUT, dtx53.out; dtx53.xco, dtx53.rco;
 Looking at the comment, for the first coder execution, the test will be reported as a PASS if it runs without timeout nor negative status, and if the stdout is equal to `../ref/dtx63.out` and `outputs/dtx63.xco` is equal to `../ref/dtx63.rco`.
 For example, if we want to add the following SIMPA execution to the tests:
-	java main/simpa/SIMPA drivers.mealy.RandomMealyDriver --cutCombinatorial --minstates 2 --maxstates 4 --seed 9
+	java simpa.hit.main/simpa/SIMPA simpa.hit.drivers.mealy.RandomMealyDriver --cutCombinatorial --minstates 2 --maxstates 4 --seed 9
 
 We will work with the `files_in_out_ref_light.txt` file that we can use as draft and when all is ok we will report the new line in the `files_in_out_ref.txt` file. The new line we add to `files_in_out_ref_light.txt` is (assuming we want to se a timeout of 60 seconds):
-	main/simpa/SIMPA < 60   ; ; Mealy Random --cutCombinatorial --minstates 2 --maxstates 4 --seed 9  ; drivers.mealy.RandomMealyDriver --cutCombinatorial --minstates 2 --maxstates 4 --seed 9  ; STDOUT, out1 ; STDERR out2
+	simpa.hit.main/simpa/SIMPA < 60   ; ; Mealy Random --cutCombinatorial --minstates 2 --maxstates 4 --seed 9  ; simpa.hit.drivers.mealy.RandomMealyDriver --cutCombinatorial --minstates 2 --maxstates 4 --seed 9  ; STDOUT, out1 ; STDERR out2
 
 
 The launching line is:

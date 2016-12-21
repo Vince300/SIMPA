@@ -529,7 +529,7 @@ else
 # gmake is recursively called defining TARGET and the real SRC_FILES
 ifndef TARGET
   SRC_FILES        := $(foreach EXT,$(SRC_EXTLIST),$(wildcard $(SRC_DIR)/*.$(EXT)))
-  # We test if the source file contains a "main"
+  # We test if the source file contains a "simpa.hit.main"
   #
   SRC_WITH_MAIN    := $(ADD_TO_SRC_WITH_MAIN) $(shell $(QA_TOOLS)/have_main.pl $(SRC_FILES))
   SRC_WITHOUT_MAIN := $(filter-out $(SRC_WITH_MAIN),$(SRC_FILES))
