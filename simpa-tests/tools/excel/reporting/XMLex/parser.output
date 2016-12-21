@@ -1,0 +1,468 @@
+Grammar
+
+  Number, Line, Rule
+    1  27 document -> prolog element misc_seq_opt
+    2  30 prolog -> version_opt encoding_opt misc_seq_opt
+    3  34 version_opt -> VERSION
+    4  35 version_opt -> /* empty */
+    5  38 encoding_opt -> ENCODING
+    6  39 encoding_opt -> /* empty */
+    7  42 misc_seq_opt -> misc_seq_opt misc
+    8  43 misc_seq_opt -> /* empty */
+    9  46 misc -> COMMENT
+   10  47 misc -> attribute_decl
+   11  50 @1 -> /* empty */
+   12  50 attribute_decl -> ATTDEF NAME @1 attribute_seq_opt ENDDEF
+   13  54 @2 -> /* empty */
+   14  54 element -> START @2 attribute_seq_opt empty_or_content
+   15  59 empty_or_content -> SLASH CLOSE
+   16  60 @3 -> /* empty */
+   17  60 empty_or_content -> CLOSE @3 content END name_opt CLOSE
+   18  64 content -> content DATA
+   19  65 content -> content misc
+   20  66 content -> content element
+   21  67 content -> /* empty */
+   22  70 name_opt -> NAME
+   23  71 name_opt -> /* empty */
+   24  74 attribute_seq_opt -> attribute_seq_opt attribute
+   25  75 attribute_seq_opt -> /* empty */
+   26  78 attribute -> NAME
+   27  79 attribute -> NAME EQ VALUE
+
+
+Terminals, with rules where they appear
+
+$ (-1)
+error (256)
+VERSION (257) 3
+ATTDEF (258) 12
+ENDDEF (259) 12
+EQ (260) 27
+SLASH (261) 15
+CLOSE (262) 15 17
+END (263) 17
+ENCODING (264) 5
+NAME (265) 12 22 26 27
+VALUE (266) 27
+DATA (267) 18
+COMMENT (268) 9
+START (269) 14
+
+
+Nonterminals, with rules where they appear
+
+document (16)
+    on left: 1
+prolog (17)
+    on left: 2, on right: 1
+version_opt (18)
+    on left: 3 4, on right: 2
+encoding_opt (19)
+    on left: 5 6, on right: 2
+misc_seq_opt (20)
+    on left: 7 8, on right: 1 2 7
+misc (21)
+    on left: 9 10, on right: 7 19
+attribute_decl (22)
+    on left: 12, on right: 10
+@1 (23)
+    on left: 11, on right: 12
+element (24)
+    on left: 14, on right: 1 20
+@2 (25)
+    on left: 13, on right: 14
+empty_or_content (26)
+    on left: 15 17, on right: 14
+@3 (27)
+    on left: 16, on right: 17
+content (28)
+    on left: 18 19 20 21, on right: 17 18 19 20
+name_opt (29)
+    on left: 22 23, on right: 17
+attribute_seq_opt (30)
+    on left: 24 25, on right: 12 14 24
+attribute (31)
+    on left: 26 27, on right: 24
+
+
+state 0
+
+    VERSION	shift, and go to state 1
+
+    $default	reduce using rule 4 (version_opt)
+
+    document	go to state 37
+    prolog	go to state 2
+    version_opt	go to state 3
+
+
+
+state 1
+
+    version_opt  ->  VERSION .   (rule 3)
+
+    $default	reduce using rule 3 (version_opt)
+
+
+
+state 2
+
+    document  ->  prolog . element misc_seq_opt   (rule 1)
+
+    START	shift, and go to state 4
+
+    element	go to state 5
+
+
+
+state 3
+
+    prolog  ->  version_opt . encoding_opt misc_seq_opt   (rule 2)
+
+    ENCODING	shift, and go to state 6
+
+    $default	reduce using rule 6 (encoding_opt)
+
+    encoding_opt	go to state 7
+
+
+
+state 4
+
+    element  ->  START . @2 attribute_seq_opt empty_or_content   (rule 14)
+
+    $default	reduce using rule 13 (@2)
+
+    @2  	go to state 8
+
+
+
+state 5
+
+    document  ->  prolog element . misc_seq_opt   (rule 1)
+
+    $default	reduce using rule 8 (misc_seq_opt)
+
+    misc_seq_opt	go to state 9
+
+
+
+state 6
+
+    encoding_opt  ->  ENCODING .   (rule 5)
+
+    $default	reduce using rule 5 (encoding_opt)
+
+
+
+state 7
+
+    prolog  ->  version_opt encoding_opt . misc_seq_opt   (rule 2)
+
+    $default	reduce using rule 8 (misc_seq_opt)
+
+    misc_seq_opt	go to state 10
+
+
+
+state 8
+
+    element  ->  START @2 . attribute_seq_opt empty_or_content   (rule 14)
+
+    $default	reduce using rule 25 (attribute_seq_opt)
+
+    attribute_seq_opt	go to state 11
+
+
+
+state 9
+
+    document  ->  prolog element misc_seq_opt .   (rule 1)
+    misc_seq_opt  ->  misc_seq_opt . misc   (rule 7)
+
+    ATTDEF	shift, and go to state 12
+    COMMENT	shift, and go to state 13
+
+    $default	reduce using rule 1 (document)
+
+    misc	go to state 14
+    attribute_decl	go to state 15
+
+
+
+state 10
+
+    prolog  ->  version_opt encoding_opt misc_seq_opt .   (rule 2)
+    misc_seq_opt  ->  misc_seq_opt . misc   (rule 7)
+
+    ATTDEF	shift, and go to state 12
+    COMMENT	shift, and go to state 13
+
+    $default	reduce using rule 2 (prolog)
+
+    misc	go to state 14
+    attribute_decl	go to state 15
+
+
+
+state 11
+
+    element  ->  START @2 attribute_seq_opt . empty_or_content   (rule 14)
+    attribute_seq_opt  ->  attribute_seq_opt . attribute   (rule 24)
+
+    SLASH	shift, and go to state 16
+    CLOSE	shift, and go to state 17
+    NAME	shift, and go to state 18
+
+    empty_or_content	go to state 19
+    attribute	go to state 20
+
+
+
+state 12
+
+    attribute_decl  ->  ATTDEF . NAME @1 attribute_seq_opt ENDDEF   (rule 12)
+
+    NAME	shift, and go to state 21
+
+
+
+state 13
+
+    misc  ->  COMMENT .   (rule 9)
+
+    $default	reduce using rule 9 (misc)
+
+
+
+state 14
+
+    misc_seq_opt  ->  misc_seq_opt misc .   (rule 7)
+
+    $default	reduce using rule 7 (misc_seq_opt)
+
+
+
+state 15
+
+    misc  ->  attribute_decl .   (rule 10)
+
+    $default	reduce using rule 10 (misc)
+
+
+
+state 16
+
+    empty_or_content  ->  SLASH . CLOSE   (rule 15)
+
+    CLOSE	shift, and go to state 22
+
+
+
+state 17
+
+    empty_or_content  ->  CLOSE . @3 content END name_opt CLOSE   (rule 17)
+
+    $default	reduce using rule 16 (@3)
+
+    @3  	go to state 23
+
+
+
+state 18
+
+    attribute  ->  NAME .   (rule 26)
+    attribute  ->  NAME . EQ VALUE   (rule 27)
+
+    EQ  	shift, and go to state 24
+
+    $default	reduce using rule 26 (attribute)
+
+
+
+state 19
+
+    element  ->  START @2 attribute_seq_opt empty_or_content .   (rule 14)
+
+    $default	reduce using rule 14 (element)
+
+
+
+state 20
+
+    attribute_seq_opt  ->  attribute_seq_opt attribute .   (rule 24)
+
+    $default	reduce using rule 24 (attribute_seq_opt)
+
+
+
+state 21
+
+    attribute_decl  ->  ATTDEF NAME . @1 attribute_seq_opt ENDDEF   (rule 12)
+
+    $default	reduce using rule 11 (@1)
+
+    @1  	go to state 25
+
+
+
+state 22
+
+    empty_or_content  ->  SLASH CLOSE .   (rule 15)
+
+    $default	reduce using rule 15 (empty_or_content)
+
+
+
+state 23
+
+    empty_or_content  ->  CLOSE @3 . content END name_opt CLOSE   (rule 17)
+
+    $default	reduce using rule 21 (content)
+
+    content	go to state 26
+
+
+
+state 24
+
+    attribute  ->  NAME EQ . VALUE   (rule 27)
+
+    VALUE	shift, and go to state 27
+
+
+
+state 25
+
+    attribute_decl  ->  ATTDEF NAME @1 . attribute_seq_opt ENDDEF   (rule 12)
+
+    $default	reduce using rule 25 (attribute_seq_opt)
+
+    attribute_seq_opt	go to state 28
+
+
+
+state 26
+
+    empty_or_content  ->  CLOSE @3 content . END name_opt CLOSE   (rule 17)
+    content  ->  content . DATA   (rule 18)
+    content  ->  content . misc   (rule 19)
+    content  ->  content . element   (rule 20)
+
+    ATTDEF	shift, and go to state 12
+    END 	shift, and go to state 29
+    DATA	shift, and go to state 30
+    COMMENT	shift, and go to state 13
+    START	shift, and go to state 4
+
+    misc	go to state 31
+    attribute_decl	go to state 15
+    element	go to state 32
+
+
+
+state 27
+
+    attribute  ->  NAME EQ VALUE .   (rule 27)
+
+    $default	reduce using rule 27 (attribute)
+
+
+
+state 28
+
+    attribute_decl  ->  ATTDEF NAME @1 attribute_seq_opt . ENDDEF   (rule 12)
+    attribute_seq_opt  ->  attribute_seq_opt . attribute   (rule 24)
+
+    ENDDEF	shift, and go to state 33
+    NAME	shift, and go to state 18
+
+    attribute	go to state 20
+
+
+
+state 29
+
+    empty_or_content  ->  CLOSE @3 content END . name_opt CLOSE   (rule 17)
+
+    NAME	shift, and go to state 34
+
+    $default	reduce using rule 23 (name_opt)
+
+    name_opt	go to state 35
+
+
+
+state 30
+
+    content  ->  content DATA .   (rule 18)
+
+    $default	reduce using rule 18 (content)
+
+
+
+state 31
+
+    content  ->  content misc .   (rule 19)
+
+    $default	reduce using rule 19 (content)
+
+
+
+state 32
+
+    content  ->  content element .   (rule 20)
+
+    $default	reduce using rule 20 (content)
+
+
+
+state 33
+
+    attribute_decl  ->  ATTDEF NAME @1 attribute_seq_opt ENDDEF .   (rule 12)
+
+    $default	reduce using rule 12 (attribute_decl)
+
+
+
+state 34
+
+    name_opt  ->  NAME .   (rule 22)
+
+    $default	reduce using rule 22 (name_opt)
+
+
+
+state 35
+
+    empty_or_content  ->  CLOSE @3 content END name_opt . CLOSE   (rule 17)
+
+    CLOSE	shift, and go to state 36
+
+
+
+state 36
+
+    empty_or_content  ->  CLOSE @3 content END name_opt CLOSE .   (rule 17)
+
+    $default	reduce using rule 17 (empty_or_content)
+
+
+
+state 37
+
+    $   	go to state 38
+
+
+
+state 38
+
+    $   	go to state 39
+
+
+
+state 39
+
+    $default	accept
+
+

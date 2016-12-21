@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<?codewarrior exportversion="1.0" ideversion="5.5" success="y" ?>
+
+<!DOCTYPE MWIDEWORKSPACE [
+<!ELEMENT MWIDEWORKSPACE (WINDOW*, COMWINDOW*)>
+<!ELEMENT WINDOW (SESSION, EDOCTYPE, PATH, FRAMELOC, FRAMESIZE, DOCKINFO)>
+<!ELEMENT COMWINDOW (SESSION, CLSID, OWNERPROJECT, DATA, FRAMELOC, FRAMESIZE, DOCKINFO)>
+<!ELEMENT SESSION (#PCDATA)>
+<!ELEMENT EDOCTYPE (#PCDATA)>
+<!ELEMENT DEFAULT (#PCDATA)>
+<!ELEMENT MAXIMIZED (#PCDATA)>
+<!ELEMENT PATH (#PCDATA)>
+<!ATTLIST PATH USERELATIVEPATHS (true | false) "true">
+<!ELEMENT FRAMELOC (X, Y)>
+<!ELEMENT X (#PCDATA)>
+<!ELEMENT Y (#PCDATA)>
+<!ELEMENT FRAMESIZE (W, H)>
+<!ELEMENT W (#PCDATA)>
+<!ELEMENT H (#PCDATA)>
+<!ELEMENT DOCKINFO (STATUS, ROW, COLUMN, DOCKBARID, PCTWIDTH, HGT, GROUPID)>
+<!ELEMENT STATUS (#PCDATA)>
+<!ELEMENT ROW (#PCDATA)>
+<!ELEMENT COLUMN (#PCDATA)>
+<!ELEMENT DOCKBARID (#PCDATA)>
+<!ELEMENT PCTWIDTH (#PCDATA)>
+<!ELEMENT HGT (#PCDATA)>
+<!ELEMENT GROUPID (GIDHIGHPART, GIDLOWPART)>
+<!ELEMENT GIDHIGHPART (#PCDATA)>
+<!ELEMENT GIDLOWPART (#PCDATA)>
+<!ELEMENT CLSID (#PCDATA)>
+<!ELEMENT OWNERPROJECT (#PCDATA)>
+<!ATTLIST OWNERPROJECT USERELATIVEPATHS (true | false) "true">
+<!ELEMENT DATA (#PCDATA)>
+<!ATTLIST DATA BINARYFORMAT (true | false) "true">
+]>
+
+<MWIDEWORKSPACE>
+    <WINDOW>
+        <SESSION>-1</SESSION>
+        <EDOCTYPE>0</EDOCTYPE>
+        <DEFAULT>true</DEFAULT>
+        <PATH USERELATIVEPATHS = "true">excel_reporting\excel_reporting.mcp</PATH>
+        <FRAMELOC>
+            <X>-16</X>
+            <Y>219</Y>
+        </FRAMELOC>
+        <FRAMESIZE>
+            <W>351</W>
+            <H>422</H>
+        </FRAMESIZE>
+        <DOCKINFO>
+            <STATUS>1</STATUS>
+            <ROW>0</ROW>
+            <COLUMN>0</COLUMN>
+            <DOCKBARID>59420</DOCKBARID>
+            <PCTWIDTH>1.000000</PCTWIDTH>
+            <HGT>180</HGT>
+            <GROUPID>
+                <GIDHIGHPART>0</GIDHIGHPART>
+                <GIDLOWPART>0</GIDLOWPART>
+            </GROUPID>
+        </DOCKINFO>
+    </WINDOW>
+    <WINDOW>
+        <SESSION>-1</SESSION>
+        <EDOCTYPE>1</EDOCTYPE>
+        <PATH USERELATIVEPATHS = "true">src\cmp_functions.h</PATH>
+        <FRAMELOC>
+            <X>10</X>
+            <Y>40</Y>
+        </FRAMELOC>
+        <FRAMESIZE>
+            <W>630</W>
+            <H>410</H>
+        </FRAMESIZE>
+        <DOCKINFO>
+            <STATUS>0</STATUS>
+            <ROW></ROW>
+            <COLUMN></COLUMN>
+            <DOCKBARID></DOCKBARID>
+            <PCTWIDTH></PCTWIDTH>
+            <HGT></HGT>
+            <GROUPID>
+                <GIDHIGHPART></GIDHIGHPART>
+                <GIDLOWPART></GIDLOWPART>
+            </GROUPID>
+        </DOCKINFO>
+    </WINDOW>
+    <WINDOW>
+        <SESSION>-1</SESSION>
+        <EDOCTYPE>1</EDOCTYPE>
+        <PATH USERELATIVEPATHS = "true">src\cmp_functions.c</PATH>
+        <FRAMELOC>
+            <X>49</X>
+            <Y>58</Y>
+        </FRAMELOC>
+        <FRAMESIZE>
+            <W>557</W>
+            <H>776</H>
+        </FRAMESIZE>
+        <DOCKINFO>
+            <STATUS>0</STATUS>
+            <ROW></ROW>
+            <COLUMN></COLUMN>
+            <DOCKBARID></DOCKBARID>
+            <PCTWIDTH></PCTWIDTH>
+            <HGT></HGT>
+            <GROUPID>
+                <GIDHIGHPART></GIDHIGHPART>
+                <GIDLOWPART></GIDLOWPART>
+            </GROUPID>
+        </DOCKINFO>
+    </WINDOW>
+    <WINDOW>
+        <SESSION>-1</SESSION>
+        <EDOCTYPE>1</EDOCTYPE>
+        <PATH USERELATIVEPATHS = "true">src\main.c</PATH>
+        <FRAMELOC>
+            <X>8</X>
+            <Y>27</Y>
+        </FRAMELOC>
+        <FRAMESIZE>
+            <W>958</W>
+            <H>786</H>
+        </FRAMESIZE>
+        <DOCKINFO>
+            <STATUS>0</STATUS>
+            <ROW></ROW>
+            <COLUMN></COLUMN>
+            <DOCKBARID></DOCKBARID>
+            <PCTWIDTH></PCTWIDTH>
+            <HGT></HGT>
+            <GROUPID>
+                <GIDHIGHPART></GIDHIGHPART>
+                <GIDLOWPART></GIDLOWPART>
+            </GROUPID>
+        </DOCKINFO>
+    </WINDOW>
+    <WINDOW>
+        <SESSION>-1</SESSION>
+        <EDOCTYPE>1</EDOCTYPE>
+        <PATH USERELATIVEPATHS = "true">src\common_yacc_lex.h</PATH>
+        <FRAMELOC>
+            <X>4</X>
+            <Y>23</Y>
+        </FRAMELOC>
+        <FRAMESIZE>
+            <W>654</W>
+            <H>491</H>
+        </FRAMESIZE>
+        <DOCKINFO>
+            <STATUS>0</STATUS>
+            <ROW></ROW>
+            <COLUMN></COLUMN>
+            <DOCKBARID></DOCKBARID>
+            <PCTWIDTH></PCTWIDTH>
+            <HGT></HGT>
+            <GROUPID>
+                <GIDHIGHPART></GIDHIGHPART>
+                <GIDLOWPART></GIDLOWPART>
+            </GROUPID>
+        </DOCKINFO>
+    </WINDOW>
+    <WINDOW>
+        <SESSION>-1</SESSION>
+        <EDOCTYPE>1</EDOCTYPE>
+        <PATH USERELATIVEPATHS = "true">src\common_yacc_lex.c</PATH>
+        <FRAMELOC>
+            <X>8</X>
+            <Y>27</Y>
+        </FRAMELOC>
+        <FRAMESIZE>
+            <W>638</W>
+            <H>437</H>
+        </FRAMESIZE>
+        <DOCKINFO>
+            <STATUS>0</STATUS>
+            <ROW></ROW>
+            <COLUMN></COLUMN>
+            <DOCKBARID></DOCKBARID>
+            <PCTWIDTH></PCTWIDTH>
+            <HGT></HGT>
+            <GROUPID>
+                <GIDHIGHPART></GIDHIGHPART>
+                <GIDLOWPART></GIDLOWPART>
+            </GROUPID>
+        </DOCKINFO>
+    </WINDOW>
+    <WINDOW>
+        <SESSION>-1</SESSION>
+        <EDOCTYPE>1</EDOCTYPE>
+        <PATH USERELATIVEPATHS = "true">src\util.c</PATH>
+        <FRAMELOC>
+            <X>8</X>
+            <Y>27</Y>
+        </FRAMELOC>
+        <FRAMESIZE>
+            <W>638</W>
+            <H>437</H>
+        </FRAMESIZE>
+        <DOCKINFO>
+            <STATUS>0</STATUS>
+            <ROW></ROW>
+            <COLUMN></COLUMN>
+            <DOCKBARID></DOCKBARID>
+            <PCTWIDTH></PCTWIDTH>
+            <HGT></HGT>
+            <GROUPID>
+                <GIDHIGHPART></GIDHIGHPART>
+                <GIDLOWPART></GIDLOWPART>
+            </GROUPID>
+        </DOCKINFO>
+    </WINDOW>
+    <WINDOW>
+        <SESSION>-1</SESSION>
+        <EDOCTYPE>1</EDOCTYPE>
+        <PATH USERELATIVEPATHS = "true">src\util.h</PATH>
+        <FRAMELOC>
+            <X>8</X>
+            <Y>27</Y>
+        </FRAMELOC>
+        <FRAMESIZE>
+            <W>646</W>
+            <H>464</H>
+        </FRAMESIZE>
+        <DOCKINFO>
+            <STATUS>0</STATUS>
+            <ROW></ROW>
+            <COLUMN></COLUMN>
+            <DOCKBARID></DOCKBARID>
+            <PCTWIDTH></PCTWIDTH>
+            <HGT></HGT>
+            <GROUPID>
+                <GIDHIGHPART></GIDHIGHPART>
+                <GIDLOWPART></GIDLOWPART>
+            </GROUPID>
+        </DOCKINFO>
+    </WINDOW>
+    <WINDOW>
+        <SESSION>-1</SESSION>
+        <EDOCTYPE>1</EDOCTYPE>
+        <PATH USERELATIVEPATHS = "true">src\xml_hist.lex</PATH>
+        <MAXIMIZED>true</MAXIMIZED>
+        <FRAMELOC>
+            <X>4</X>
+            <Y>4</Y>
+        </FRAMELOC>
+        <FRAMESIZE>
+            <W>897</W>
+            <H>764</H>
+        </FRAMESIZE>
+        <DOCKINFO>
+            <STATUS>0</STATUS>
+            <ROW></ROW>
+            <COLUMN></COLUMN>
+            <DOCKBARID></DOCKBARID>
+            <PCTWIDTH></PCTWIDTH>
+            <HGT></HGT>
+            <GROUPID>
+                <GIDHIGHPART></GIDHIGHPART>
+                <GIDLOWPART></GIDLOWPART>
+            </GROUPID>
+        </DOCKINFO>
+    </WINDOW>
+    <WINDOW>
+        <SESSION>-2147483648</SESSION>
+        <EDOCTYPE>21</EDOCTYPE>
+        <FRAMELOC>
+            <X>4</X>
+            <Y>23</Y>
+        </FRAMELOC>
+        <FRAMESIZE>
+            <W>584</W>
+            <H>711</H>
+        </FRAMESIZE>
+        <DOCKINFO>
+            <STATUS>0</STATUS>
+            <ROW></ROW>
+            <COLUMN></COLUMN>
+            <DOCKBARID></DOCKBARID>
+            <PCTWIDTH></PCTWIDTH>
+            <HGT></HGT>
+            <GROUPID>
+                <GIDHIGHPART></GIDHIGHPART>
+                <GIDLOWPART></GIDLOWPART>
+            </GROUPID>
+        </DOCKINFO>
+    </WINDOW>
+    <WINDOW>
+        <SESSION>-2147483648</SESSION>
+        <EDOCTYPE>24</EDOCTYPE>
+        <FRAMELOC>
+            <X>0</X>
+            <Y>0</Y>
+        </FRAMELOC>
+        <FRAMESIZE>
+            <W>1678</W>
+            <H>4109</H>
+        </FRAMESIZE>
+        <DOCKINFO>
+            <STATUS>0</STATUS>
+            <ROW></ROW>
+            <COLUMN></COLUMN>
+            <DOCKBARID></DOCKBARID>
+            <PCTWIDTH></PCTWIDTH>
+            <HGT></HGT>
+            <GROUPID>
+                <GIDHIGHPART></GIDHIGHPART>
+                <GIDLOWPART></GIDLOWPART>
+            </GROUPID>
+        </DOCKINFO>
+    </WINDOW>
+    <WINDOW>
+        <SESSION>-2147483648</SESSION>
+        <EDOCTYPE>25</EDOCTYPE>
+        <FRAMELOC>
+            <X>33</X>
+            <Y>62</Y>
+        </FRAMELOC>
+        <FRAMESIZE>
+            <W>295</W>
+            <H>80</H>
+        </FRAMESIZE>
+        <DOCKINFO>
+            <STATUS>0</STATUS>
+            <ROW></ROW>
+            <COLUMN></COLUMN>
+            <DOCKBARID></DOCKBARID>
+            <PCTWIDTH></PCTWIDTH>
+            <HGT></HGT>
+            <GROUPID>
+                <GIDHIGHPART></GIDHIGHPART>
+                <GIDLOWPART></GIDLOWPART>
+            </GROUPID>
+        </DOCKINFO>
+    </WINDOW>
+    <WINDOW>
+        <SESSION>-2147483648</SESSION>
+        <EDOCTYPE>23</EDOCTYPE>
+        <DEFAULT>true</DEFAULT>
+        <MAXIMIZED>true</MAXIMIZED>
+        <FRAMELOC>
+            <X>0</X>
+            <Y>0</Y>
+        </FRAMELOC>
+        <FRAMESIZE>
+            <W>2270</W>
+            <H>6107</H>
+        </FRAMESIZE>
+        <DOCKINFO>
+            <STATUS>0</STATUS>
+            <ROW></ROW>
+            <COLUMN></COLUMN>
+            <DOCKBARID></DOCKBARID>
+            <PCTWIDTH></PCTWIDTH>
+            <HGT></HGT>
+            <GROUPID>
+                <GIDHIGHPART></GIDHIGHPART>
+                <GIDLOWPART></GIDLOWPART>
+            </GROUPID>
+        </DOCKINFO>
+    </WINDOW>
+    <WINDOW>
+        <SESSION>-2147483648</SESSION>
+        <EDOCTYPE>26</EDOCTYPE>
+        <FRAMELOC>
+            <X>-103</X>
+            <Y>48</Y>
+        </FRAMELOC>
+        <FRAMESIZE>
+            <W>575</W>
+            <H>357</H>
+        </FRAMESIZE>
+        <DOCKINFO>
+            <STATUS>1</STATUS>
+            <ROW>1</ROW>
+            <COLUMN>0</COLUMN>
+            <DOCKBARID>59419</DOCKBARID>
+            <PCTWIDTH>1.000000</PCTWIDTH>
+            <HGT>111</HGT>
+            <GROUPID>
+                <GIDHIGHPART>0</GIDHIGHPART>
+                <GIDLOWPART>0</GIDLOWPART>
+            </GROUPID>
+        </DOCKINFO>
+        <DEBUGCONTEXT>GlobalSession, cpux86, osWin32</DEBUGCONTEXT>
+        <DEBUGTARGETNAME>D:\cygwin\usr\local\qa\compiler_validation\tools\excel\reporting\xml_hist.exe</DEBUGTARGETNAME>
+    </WINDOW>
+    <WINDOW>
+        <SESSION>-2147483648</SESSION>
+        <EDOCTYPE>36</EDOCTYPE>
+        <FRAMELOC>
+            <X>4</X>
+            <Y>23</Y>
+        </FRAMELOC>
+        <FRAMESIZE>
+            <W>438</W>
+            <H>597</H>
+        </FRAMESIZE>
+        <DOCKINFO>
+            <STATUS>0</STATUS>
+            <ROW></ROW>
+            <COLUMN></COLUMN>
+            <DOCKBARID></DOCKBARID>
+            <PCTWIDTH></PCTWIDTH>
+            <HGT></HGT>
+            <GROUPID>
+                <GIDHIGHPART></GIDHIGHPART>
+                <GIDLOWPART></GIDLOWPART>
+            </GROUPID>
+        </DOCKINFO>
+    </WINDOW>
+</MWIDEWORKSPACE>

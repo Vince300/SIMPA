@@ -1,0 +1,872 @@
+<?xml version="1.0" ?>
+<HISTORY>
+  <REPORT version="v2851_test_xml">
+    <run_id>2851</run_id>
+    <scenario_file>scenarios/local_scc/short_noclean.scn</scenario_file>
+    <start_date>2004/07/27 19:33:05</start_date>
+    <compiler_version>
+      <host_type>cygwin</host_type>
+      <host_name>ongaku</host_name>
+      <tool>
+	<tool_name>scc</tool_name>
+	<tool_version>StarCore C Compiler vMtwk.Production 2.5.2 build 9      (build 2.55, date 062504-1425)</tool_version>
+      </tool>
+      <tool>
+	<tool_name>cobj</tool_name>
+	<tool_version>2.44</tool_version>
+      </tool>
+      <tool>
+	<tool_name>icode</tool_name>
+	<tool_version>2.262 for SC (-cpp is set)</tool_version>
+      </tool>
+      <tool>
+	<tool_name>llt</tool_name>
+	<tool_version>2.5.2 engineering - MDCR_204_Thu Jun 10</tool_version>
+      </tool>
+      <tool>
+	<tool_name>asmsc100</tool_name>
+	<tool_version>6.5.12</tool_version>
+      </tool>
+      <tool>
+	<tool_name>sc100-ld</tool_name>
+	<tool_version>1.3.42 - 2004.06.08</tool_version>
+      </tool>
+      <tool>
+	<tool_name>runsc100</tool_name>
+	<tool_version>7.7.0 - </tool_version>
+      </tool>
+      <tool>
+	<tool_name>sc100-sim</tool_name>
+	<tool_version>1.5.5e</tool_version>
+      </tool>
+      <tool>
+	<tool_name>disasmsc100</tool_name>
+	<tool_version>1.2.17 - 04-21-2004</tool_version>
+      </tool>
+    </compiler_version>
+    <scenario>
+      <host_name>ongaku</host_name>
+      <test_def>
+	<test_path>"/usr/local/qa/root/runtest/applications/ecc/v0"</test_path>
+	<options_set>-l light -p -mo PROTO=BASIC_OP -s sc100-sim -so '-arch=sc140' -so '-suppress all' -no_pre_clean -no_clean -O3 -Og -arch sc140</options_set>
+      </test_def>
+      <test_def>
+	<test_path>"/usr/local/qa/root/runtest/applications/g728/v1"</test_path>
+	<options_set>-l light -p -mo PROTO=BASIC_OP -s sc100-sim -so '-arch=sc140' -so '-suppress all' -no_pre_clean -no_clean -O3 -Og -arch sc140</options_set>
+      </test_def>
+      <test_def>
+	<test_path>"/usr/local/qa/root/runtest/applications/ecc/v0"</test_path>
+	<options_set>-l light -p -t decoder -mo PROTO=EMULATE -s sc100-sim -so '-arch=sc140' -so '-suppress all' -no_pre_clean -no_clean -O3 -Og -arch sc140</options_set>
+      </test_def>
+      <test_def>
+	<test_path>"/usr/local/qa/root/runtest/applications/g728/v1"</test_path>
+	<options_set>-l light -p -t decoder -mo PROTO=EMULATE -s sc100-sim -so '-arch=sc140' -so '-suppress all' -no_pre_clean -no_clean -O3 -Og -arch sc140</options_set>
+      </test_def>
+    </scenario>
+    <param_files>
+      <host_name>ongaku</host_name>
+    </param_files>
+
+
+    <TEST scn_idx="0">
+      <Test_path>applications/ecc/v0</Test_path>
+      <Start_date>2004/07/27 19:33:07</Start_date>
+      <Test_name>     ecc</Test_name>
+      <Host_name>ongaku</Host_name>
+      <Test_mode>performance</Test_mode>
+      <Level>light</Level>
+      <CC_options>-O3 -Og -arch sc140</CC_options>
+      <CFLAGS>-O3 -Og -arch sc140 </CFLAGS>
+      <Makefile>makefile.scc</Makefile>
+      <Make_options>PROTO=BASIC_OP</Make_options>
+      <Simulator>sc100-sim</Simulator>
+      <Sim_options>-arch=sc140 -suppress all</Sim_options>
+      <Targets>
+	<target>coder</target>
+	<target>decoder</target>
+	<target>coder_decoder</target>
+      </Targets>
+      <Exec>
+	<target>coder</target>
+	<description>coder</description>
+	<status>PASS</status>
+	<size>4836</size>
+	<input>_QA_PERF_coder</input>
+	<n_frames>2</n_frames>
+	<sample_p_frame>248</sample_p_frame>
+	<e_freq>8000</e_freq>
+	<argv>../inputs/speech.cod outputs/speech.cod.bitstream</argv>
+	<cycles>252621</cycles>
+	<cycles_p_frame>   126310</cycles_p_frame>
+	<MIPS>4.075</MIPS>
+      </Exec>
+      <Exec>
+	<target>decoder</target>
+	<description>decoder</description>
+	<status>PASS</status>
+	<size>4836</size>
+	<input>_QA_PERF_decoder</input>
+	<n_frames>2</n_frames>
+	<sample_p_frame>248</sample_p_frame>
+	<e_freq>8000</e_freq>
+	<argv>../inputs/speech.dec.bitstream outputs/speech.dec</argv>
+	<cycles>500191</cycles>
+	<cycles_p_frame>   250096</cycles_p_frame>
+	<MIPS>8.068</MIPS>
+      </Exec>
+      <Exec>
+	<target>coder_decoder</target>
+	<description>coder_decoder</description>
+	<status>PASS</status>
+	<size>4836</size>
+	<input>_QA_PERF_coder_decoder</input>
+	<n_frames>2</n_frames>
+	<sample_p_frame>248</sample_p_frame>
+	<e_freq>8000</e_freq>
+	<argv>../inputs/speech.cod outputs/speech.codec.bitstream outputs/speech.codec</argv>
+	<cycles>758490</cycles>
+	<cycles_p_frame>   379245</cycles_p_frame>
+	<MIPS>12.234</MIPS>
+      </Exec>
+      <End_date>2004/07/27 19:33:12</End_date>
+    </TEST>
+
+
+    <TEST scn_idx="1">
+      <Test_path>applications/g728/v1</Test_path>
+      <Start_date>2004/07/27 19:33:13</Start_date>
+      <Test_name>G.728_optimized</Test_name>
+      <Host_name>ongaku</Host_name>
+      <Test_mode>performance</Test_mode>
+      <Level>light</Level>
+      <CC_options>-O3 -Og -arch sc140</CC_options>
+      <CFLAGS>-O3 -Og -arch sc140 -mb</CFLAGS>
+      <Makefile>makefile.scc</Makefile>
+      <Make_options>PROTO=BASIC_OP</Make_options>
+      <Simulator>sc100-sim</Simulator>
+      <Sim_options>-arch=sc140 -suppress all</Sim_options>
+      <Targets>
+	<target>coder</target>
+	<target>decoder</target>
+	<target>coder_decoder</target>
+      </Targets>
+      <Exec>
+	<target>coder</target>
+	<description>coder</description>
+	<status>PASS</status>
+	<size>26506</size>
+	<input>_QA_PERF_coder</input>
+	<n_frames>256</n_frames>
+	<sample_p_frame>5</sample_p_frame>
+	<e_freq>8000</e_freq>
+	<argv>../inputs/speech.cod.pcm outputs/speech.cod.bitstream</argv>
+	<cycles>30068701</cycles>
+	<cycles_p_frame>   117456</cycles_p_frame>
+	<MIPS>187.929</MIPS>
+      </Exec>
+      <Exec>
+	<target>decoder</target>
+	<description>decoder postfilt off</description>
+	<status>PASS</status>
+	<size>26506</size>
+	<input>_QA_PERF_decoder</input>
+	<n_frames>256</n_frames>
+	<sample_p_frame>5</sample_p_frame>
+	<e_freq>8000</e_freq>
+	<argv>../inputs/speech.dec.bitstream outputs/speech.dec.pcm 0</argv>
+	<cycles>22662432</cycles>
+	<cycles_p_frame>    88525</cycles_p_frame>
+	<MIPS>141.640</MIPS>
+      </Exec>
+      <Exec>
+	<target>coder_decoder</target>
+	<description>coder_decoder postfilt off</description>
+	<status>PASS</status>
+	<size>26506</size>
+	<input>_QA_PERF_coder_decoder</input>
+	<n_frames>256</n_frames>
+	<sample_p_frame>5</sample_p_frame>
+	<e_freq>8000</e_freq>
+	<argv>../inputs/speech.cod.pcm outputs/speech.tmp.codec.bitstream outputs/speech.codec.pcm 0</argv>
+	<cycles>53239494</cycles>
+	<cycles_p_frame>   207967</cycles_p_frame>
+	<MIPS>332.747</MIPS>
+      </Exec>
+      <End_date>2004/07/27 19:35:35</End_date>
+    </TEST>
+
+
+    <TEST scn_idx="2">
+      <Test_path>applications/ecc/v0</Test_path>
+      <Start_date>2004/07/27 19:35:36</Start_date>
+      <Test_name>     ecc</Test_name>
+      <Host_name>ongaku</Host_name>
+      <Test_mode>performance</Test_mode>
+      <Level>light</Level>
+      <CC_options>-O3 -Og -arch sc140</CC_options>
+      <CFLAGS>-O3 -Og -arch sc140 -D_USE_CW_PROTO_</CFLAGS>
+      <Makefile>makefile.scc</Makefile>
+      <Make_options>PROTO=EMULATE</Make_options>
+      <Simulator>sc100-sim</Simulator>
+      <Sim_options>-arch=sc140 -suppress all</Sim_options>
+      <Targets>
+	<target>decoder</target>
+      </Targets>
+      <Exec>
+	<target>decoder</target>
+	<description>decoder</description>
+	<status>PASS</status>
+	<size>4836</size>
+	<input>_QA_PERF_decoder</input>
+	<n_frames>2</n_frames>
+	<sample_p_frame>248</sample_p_frame>
+	<e_freq>8000</e_freq>
+	<cycles>500191</cycles>
+	<cycles_p_frame>   250096</cycles_p_frame>
+	<MIPS>8.068</MIPS>
+      </Exec>
+      <End_date>2004/07/27 19:35:37</End_date>
+    </TEST>
+
+
+    <TEST scn_idx="3">
+      <Test_path>applications/g728/v1</Test_path>
+      <Start_date>2004/07/27 19:35:38</Start_date>
+      <Test_name>G.728_optimized</Test_name>
+      <Host_name>ongaku</Host_name>
+      <Test_mode>performance</Test_mode>
+      <Level>light</Level>
+      <CC_options>-O3 -Og -arch sc140</CC_options>
+      <CFLAGS>-O3 -Og -arch sc140 -D_USE_CW_PROTO_ -mb</CFLAGS>
+      <Makefile>makefile.scc</Makefile>
+      <Make_options>PROTO=EMULATE</Make_options>
+      <Simulator>sc100-sim</Simulator>
+      <Sim_options>-arch=sc140 -suppress all</Sim_options>
+      <Targets>
+	<target>decoder</target>
+      </Targets>
+      <Exec>
+	<target>decoder</target>
+	<description>decoder postfilt off</description>
+	<status>PASS</status>
+	<size>26506</size>
+	<input>_QA_PERF_decoder</input>
+	<n_frames>256</n_frames>
+	<sample_p_frame>5</sample_p_frame>
+	<e_freq>8000</e_freq>
+	<cycles>22662432</cycles>
+	<cycles_p_frame>    88525</cycles_p_frame>
+	<MIPS>141.640</MIPS>
+      </Exec>
+      <End_date>2004/07/27 19:36:10</End_date>
+    </TEST>
+    <End_date>2004/07/27 19:36:24</End_date>
+  </REPORT>
+
+
+
+
+  <REPORT version="v2856_test_xml">
+    <run_id>2856</run_id>
+    <scenario_file>scenarios/local_scc/short_noclean.scn</scenario_file>
+    <start_date>2004/07/29 17:27:34</start_date>
+    <compiler_version>
+      <host_type>cygwin</host_type>
+      <host_name>ongaku</host_name>
+      <tool>
+	<tool_name>scc</tool_name>
+	<tool_version>StarCore C Compiler vMtwk.Production 2.5.2 build 9      (build 2.55, date 062504-1425)</tool_version>
+      </tool>
+      <tool>
+	<tool_name>cobj</tool_name>
+	<tool_version>2.44</tool_version>
+      </tool>
+      <tool>
+	<tool_name>icode</tool_name>
+	<tool_version>2.262 for SC (-cpp is set)</tool_version>
+      </tool>
+      <tool>
+	<tool_name>llt</tool_name>
+	<tool_version>2.5.2 engineering - MDCR_204_Thu Jun 10</tool_version>
+      </tool>
+      <tool>
+	<tool_name>asmsc100</tool_name>
+	<tool_version>6.5.12</tool_version>
+      </tool>
+      <tool>
+	<tool_name>sc100-ld</tool_name>
+	<tool_version>1.3.42 - 2004.06.08</tool_version>
+      </tool>
+      <tool>
+	<tool_name>runsc100</tool_name>
+	<tool_version>7.7.0 - </tool_version>
+      </tool>
+      <tool>
+	<tool_name>sc100-sim</tool_name>
+	<tool_version>1.5.5e</tool_version>
+      </tool>
+      <tool>
+	<tool_name>disasmsc100</tool_name>
+	<tool_version>1.2.17 - 04-21-2004</tool_version>
+      </tool>
+    </compiler_version>
+    <scenario>
+      <host_name>ongaku</host_name>
+      <test_def>
+	<test_path>"/usr/local/qa/root/runtest/applications/ecc/v0"</test_path>
+	<options_set>-l light -p -mo PROTO=BASIC_OP -s sc100-sim -so '-arch=sc140' -so '-suppress all' -no_pre_clean -no_clean -O3 -Og -arch sc140 -Xicode "-F /usr/local/qa/root/runtest/Xicode-F/icode-basic.opt"</options_set>
+      </test_def>
+      <test_def>
+	<test_path>"/usr/local/qa/root/runtest/applications/g728/v1"</test_path>
+	<options_set>-l light -p -mo PROTO=BASIC_OP -s sc100-sim -so '-arch=sc140' -so '-suppress all' -no_pre_clean -no_clean -O3 -Og -arch sc140</options_set>
+      </test_def>
+      <test_def>
+	<test_path>"/usr/local/qa/root/runtest/applications/ecc/v0"</test_path>
+	<options_set>-l light -p -t decoder -mo PROTO=EMULATE -s sc100-sim -so '-arch=sc140' -so '-suppress all' -no_pre_clean -no_clean -O3 -Og -arch sc140</options_set>
+      </test_def>
+      <test_def>
+	<test_path>"/usr/local/qa/root/runtest/applications/g728/v1"</test_path>
+	<options_set>-l light -p -t decoder -mo PROTO=EMULATE -s sc100-sim -so '-arch=sc140' -so '-suppress all' -no_pre_clean -no_clean -O3 -Og -arch sc140</options_set>
+      </test_def>
+    </scenario>
+    <param_files>
+      <host_name>ongaku</host_name>
+      <param_file>
+	<filename>"/usr/local/qa/root/runtest/Xicode-F/icode-basic.opt"</filename>
+            <![CDATA[
+            induct_verbose = FALSE
+
+            achieve_induction = TRUE
+            achieve_multi_step = FALSE
+            achieve_composition = FALSE
+
+            achieve_wrap_iv = FALSE
+            achieve_redundant_iv = FALSE
+            scalarization = FALSE
+
+            achieve_cont_mod_access = FALSE
+            achieve_cross_compo = FALSE
+            Smart_Reorder = TRUE
+
+            sequential_access = FALSE
+            paired_access = FALSE
+            smart_seqpack_strategy = FALSE
+            unrolling_factor = 0
+            Enable_csub_collapse = TRUE
+
+            Modulo = TRUE
+            propagate_indir = FALSE
+
+            Collapse_nests = FALSE
+            ]]>
+      </param_file>
+      <param_file>
+	<filename>"toto.opt"</filename>
+            <![CDATA[trace = FALSE]]>
+      </param_file>
+    </param_files>
+
+
+    <TEST scn_idx="0">
+      <Test_path>applications/ecc/v0</Test_path>
+      <Start_date>2004/07/29 17:27:34</Start_date>
+      <Test_name>     ecc</Test_name>
+      <Host_name>ongaku</Host_name>
+      <Test_mode>performance</Test_mode>
+      <Level>light</Level>
+      <CC_options>-O3 -Og -arch sc140 -Xicode "-F D:/cygwin/usr/local/qa/root/runtest/Xicode-F/icode-basic.opt"</CC_options>
+      <CFLAGS>-O3 -Og -arch sc140 -Xicode "-F D:/cygwin/usr/local/qa/root/runtest/Xicode-F/icode-basic.opt" </CFLAGS>
+      <Makefile>makefile.scc</Makefile>
+      <Make_options>PROTO=BASIC_OP</Make_options>
+      <Simulator>sc100-sim</Simulator>
+      <Sim_options>-arch=sc140 -suppress all</Sim_options>
+      <Targets>
+	<target>coder</target>
+	<target>decoder</target>
+	<target>coder_decoder</target>
+      </Targets>
+      <Exec>
+	<target>coder</target>
+	<description>coder</description>
+	<status>PASS</status>
+	<size>4836</size>
+	<input>_QA_PERF_coder</input>
+	<n_frames>2</n_frames>
+	<sample_p_frame>248</sample_p_frame>
+	<e_freq>8000</e_freq>
+	<argv>../inputs/speech.cod outputs/speech.cod.bitstream</argv>
+	<cycles>252441</cycles>
+	<cycles_p_frame>   126310</cycles_p_frame>
+	<MIPS>4.075</MIPS>
+      </Exec>
+      <Exec>
+	<target>decoder</target>
+	<description>decoder</description>
+	<status>PASS</status>
+	<size>4836</size>
+	<input>_QA_PERF_decoder</input>
+	<n_frames>2</n_frames>
+	<sample_p_frame>248</sample_p_frame>
+	<e_freq>8000</e_freq>
+	<argv>../inputs/speech.dec.bitstream outputs/speech.dec</argv>
+	<cycles>509101</cycles>
+	<cycles_p_frame>   250096</cycles_p_frame>
+	<MIPS>8.068</MIPS>
+      </Exec>
+      <Exec>
+	<target>coder_decoder</target>
+	<description>coder_decoder</description>
+	<status>PASS</status>
+	<size>4836</size>
+	<input>_QA_PERF_coder_decoder</input>
+	<n_frames>2</n_frames>
+	<sample_p_frame>248</sample_p_frame>
+	<e_freq>8000</e_freq>
+	<argv>../inputs/speech.cod outputs/speech.codec.bitstream outputs/speech.codec</argv>
+	<cycles>753450</cycles>
+	<cycles_p_frame>   379245</cycles_p_frame>
+	<MIPS>12.234</MIPS>
+      </Exec>
+      <End_date>2004/07/29 17:27:38</End_date>
+    </TEST>
+
+
+    <TEST scn_idx="1">
+      <Test_path>applications/g728/v1</Test_path>
+      <Start_date>2004/07/29 17:27:39</Start_date>
+      <Test_name>G.728_optimized</Test_name>
+      <Host_name>ongaku</Host_name>
+      <Test_mode>performance</Test_mode>
+      <Level>light</Level>
+      <CC_options>-O3 -Og -arch sc140</CC_options>
+      <CFLAGS>-O3 -Og -arch sc140 -mb</CFLAGS>
+      <Makefile>makefile.scc</Makefile>
+      <Make_options>PROTO=BASIC_OP</Make_options>
+      <Simulator>sc100-sim</Simulator>
+      <Sim_options>-arch=sc140 -suppress all</Sim_options>
+      <Targets>
+	<target>coder</target>
+	<target>decoder</target>
+	<target>coder_decoder</target>
+      </Targets>
+      <Exec>
+	<target>coder</target>
+	<description>coder</description>
+	<status>PASS</status>
+	<size>26506</size>
+	<input>_QA_PERF_coder</input>
+	<n_frames>256</n_frames>
+	<sample_p_frame>5</sample_p_frame>
+	<e_freq>8000</e_freq>
+	<argv>../inputs/speech.cod.pcm outputs/speech.cod.bitstream</argv>
+	<cycles>30062781</cycles>
+	<cycles_p_frame>   117456</cycles_p_frame>
+	<MIPS>187.929</MIPS>
+      </Exec>
+      <Exec>
+	<target>decoder</target>
+	<description>decoder postfilt off</description>
+	<status>PASS</status>
+	<size>26506</size>
+	<input>_QA_PERF_decoder</input>
+	<n_frames>256</n_frames>
+	<sample_p_frame>5</sample_p_frame>
+	<e_freq>8000</e_freq>
+	<argv>../inputs/speech.dec.bitstream outputs/speech.dec.pcm 0</argv>
+	<cycles>22662461</cycles>
+	<cycles_p_frame>    88525</cycles_p_frame>
+	<MIPS>141.640</MIPS>
+      </Exec>
+      <Exec>
+	<target>coder_decoder</target>
+	<description>coder_decoder postfilt off</description>
+	<status>PASS</status>
+	<size>26506</size>
+	<input>_QA_PERF_coder_decoder</input>
+	<n_frames>256</n_frames>
+	<sample_p_frame>5</sample_p_frame>
+	<e_freq>8000</e_freq>
+	<argv>../inputs/speech.cod.pcm outputs/speech.tmp.codec.bitstream outputs/speech.codec.pcm 0</argv>
+	<cycles>53296394</cycles>
+	<cycles_p_frame>   207967</cycles_p_frame>
+	<MIPS>332.747</MIPS>
+      </Exec>
+      <End_date>2004/07/29 17:29:00</End_date>
+    </TEST>
+
+
+    <TEST scn_idx="2">
+      <Test_path>applications/ecc/v0</Test_path>
+      <Start_date>2004/07/29 17:29:01</Start_date>
+      <Test_name>     ecc</Test_name>
+      <Host_name>ongaku</Host_name>
+      <Test_mode>performance</Test_mode>
+      <Level>light</Level>
+      <CC_options>-O3 -Og -arch sc140</CC_options>
+      <CFLAGS>-O3 -Og -arch sc140 -D_USE_CW_PROTO_</CFLAGS>
+      <Makefile>makefile.scc</Makefile>
+      <Make_options>PROTO=EMULATE</Make_options>
+      <Simulator>sc100-sim</Simulator>
+      <Sim_options>-arch=sc140 -suppress all</Sim_options>
+      <Targets>
+	<target>decoder</target>
+      </Targets>
+      <Exec>
+	<target>decoder</target>
+	<description>decoder</description>
+	<status>PASS</status>
+	<size>4836</size>
+	<input>_QA_PERF_decoder</input>
+	<n_frames>2</n_frames>
+	<sample_p_frame>248</sample_p_frame>
+	<e_freq>8000</e_freq>
+	<argv>../inputs/speech.dec.bitstream outputs/speech.dec</argv>
+	<cycles>506501</cycles>
+	<cycles_p_frame>   250096</cycles_p_frame>
+	<MIPS>8.068</MIPS>
+      </Exec>
+      <End_date>2004/07/29 17:29:02</End_date>
+    </TEST>
+
+
+    <TEST scn_idx="3">
+      <Test_path>applications/g728/v1</Test_path>
+      <Start_date>2004/07/29 17:29:03</Start_date>
+      <Test_name>G.728_optimized</Test_name>
+      <Host_name>ongaku</Host_name>
+      <Test_mode>performance</Test_mode>
+      <Level>light</Level>
+      <CC_options>-O3 -Og -arch sc140</CC_options>
+      <CFLAGS>-O3 -Og -arch sc140 -D_USE_CW_PROTO_ -mb</CFLAGS>
+      <Makefile>makefile.scc</Makefile>
+      <Make_options>PROTO=EMULATE</Make_options>
+      <Simulator>sc100-sim</Simulator>
+      <Sim_options>-arch=sc140 -suppress all</Sim_options>
+      <Targets>
+	<target>decoder</target>
+      </Targets>
+      <Exec>
+	<target>decoder</target>
+	<description>decoder postfilt off</description>
+	<status>PASS</status>
+	<size>26506</size>
+	<input>_QA_PERF_decoder</input>
+	<n_frames>256</n_frames>
+	<sample_p_frame>5</sample_p_frame>
+	<e_freq>8000</e_freq>
+	<argv>../inputs/speech.dec.bitstream outputs/speech.dec.pcm 0</argv>
+	<cycles>22612332</cycles>
+	<cycles_p_frame>    88525</cycles_p_frame>
+	<MIPS>141.640</MIPS>
+      </Exec>
+      <End_date>2004/07/29 17:29:21</End_date>
+    </TEST>
+
+    <End_date>2004/07/29 17:29:33</End_date>
+  </REPORT>
+
+
+
+
+  <REPORT version="v2858_test_xml">
+    <run_id>2858</run_id>
+    <scenario_file>scenarios/local_scc/short_noclean.scn</scenario_file>
+    <start_date>2004/07/29 17:27:34</start_date>
+    <compiler_version>
+      <host_type>cygwin</host_type>
+      <host_name>ongaku</host_name>
+      <tool>
+	<tool_name>scc</tool_name>
+	<tool_version>StarCore C Compiler vMtwk.Production 2.5.2 build 9      (build 2.55, date 062504-1425)</tool_version>
+      </tool>
+      <tool>
+	<tool_name>cobj</tool_name>
+	<tool_version>2.44</tool_version>
+      </tool>
+      <tool>
+	<tool_name>icode</tool_name>
+	<tool_version>2.262 for SC (-cpp is set)</tool_version>
+      </tool>
+      <tool>
+	<tool_name>llt</tool_name>
+	<tool_version>2.5.2 engineering - MDCR_204_Thu Jun 10</tool_version>
+      </tool>
+      <tool>
+	<tool_name>asmsc100</tool_name>
+	<tool_version>6.5.12</tool_version>
+      </tool>
+      <tool>
+	<tool_name>sc100-ld</tool_name>
+	<tool_version>1.3.42 - 2004.06.08</tool_version>
+      </tool>
+      <tool>
+	<tool_name>runsc100</tool_name>
+	<tool_version>7.7.0 - </tool_version>
+      </tool>
+      <tool>
+	<tool_name>sc100-sim</tool_name>
+	<tool_version>1.5.5e</tool_version>
+      </tool>
+      <tool>
+	<tool_name>disasmsc100</tool_name>
+	<tool_version>1.2.17 - 04-21-2004</tool_version>
+      </tool>
+    </compiler_version>
+    <scenario>
+      <host_name>ongaku</host_name>
+      <test_def>
+	<test_path>"/usr/local/qa/root/runtest/applications/ecc/v0"</test_path>
+	<options_set>-l light -p -mo PROTO=BASIC_OP -s sc100-sim -so '-arch=sc140' -so '-suppress all' -no_pre_clean -no_clean -O3 -Og -arch sc140 -Xicode "-F /usr/local/qa/root/runtest/Xicode-F/icode-basic.opt"</options_set>
+      </test_def>
+      <test_def>
+	<test_path>"/usr/local/qa/root/runtest/applications/g728/v1"</test_path>
+	<options_set>-l light -p -mo PROTO=BASIC_OP -s sc100-sim -so '-arch=sc140' -so '-suppress all' -no_pre_clean -no_clean -O3 -Og -arch sc140</options_set>
+      </test_def>
+      <test_def>
+	<test_path>"/usr/local/qa/root/runtest/applications/ecc/v0"</test_path>
+	<options_set>-l light -p -t decoder -mo PROTO=EMULATE -s sc100-sim -so '-arch=sc140' -so '-suppress all' -no_pre_clean -no_clean -O3 -Og -arch sc140</options_set>
+      </test_def>
+      <test_def>
+	<test_path>"/usr/local/qa/root/runtest/applications/g728/v1"</test_path>
+	<options_set>-l light -p -t decoder -mo PROTO=EMULATE -s sc100-sim -so '-arch=sc140' -so '-suppress all' -no_pre_clean -no_clean -O3 -Og -arch sc140</options_set>
+      </test_def>
+    </scenario>
+    <param_files>
+      <host_name>ongaku</host_name>
+      <param_file>
+	<filename>"/usr/local/qa/root/runtest/Xicode-F/icode-basic.opt"</filename>
+        <![CDATA[
+        induct_verbose = FALSE
+
+        achieve_induction = TRUE
+        achieve_multi_step = FALSE
+        achieve_composition = FALSE
+
+        achieve_wrap_iv = FALSE
+        achieve_redundant_iv = FALSE
+        scalarization = FALSE
+
+        achieve_cont_mod_access = FALSE
+        achieve_cross_compo = FALSE
+        Smart_Reorder = TRUE
+
+        sequential_access = FALSE
+        paired_access = FALSE
+        smart_seqpack_strategy = FALSE
+        unrolling_factor = 0
+        Enable_csub_collapse = TRUE
+
+        Modulo = TRUE
+        propagate_indir = FALSE
+
+        Collapse_nests = FALSE
+        ]]>
+      </param_file>
+      <param_file>
+	<filename>"toto.opt"</filename>
+        <![CDATA[trace = FALSE]]>
+      </param_file>
+    </param_files>
+
+
+    <TEST scn_idx="0">
+      <Test_path>applications/ecc/v0</Test_path>
+      <Start_date>2004/07/29 17:27:34</Start_date>
+      <Test_name>     ecc</Test_name>
+      <Host_name>ongaku</Host_name>
+      <Test_mode>performance</Test_mode>
+      <Level>light</Level>
+      <CC_options>-O3 -Og -arch sc140 -Xicode "-F D:/cygwin/usr/local/qa/root/runtest/Xicode-F/icode-basic.opt"</CC_options>
+      <CFLAGS>-O3 -Og -arch sc140 -Xicode "-F D:/cygwin/usr/local/qa/root/runtest/Xicode-F/icode-basic.opt" </CFLAGS>
+      <Makefile>makefile.scc</Makefile>
+      <Make_options>PROTO=BASIC_OP</Make_options>
+      <Simulator>sc100-sim</Simulator>
+      <Sim_options>-arch=sc140 -suppress all</Sim_options>
+      <Targets>
+	<target>coder</target>
+	<target>decoder</target>
+	<target>coder_decoder</target>
+      </Targets>
+      <Exec>
+	<target>coder</target>
+	<description>coder</description>
+	<status>FAIL(Diff)</status>
+	<size>4836</size>
+	<input>_QA_PERF_coder</input>
+	<n_frames>2</n_frames>
+	<sample_p_frame>248</sample_p_frame>
+	<e_freq>8000</e_freq>
+	<argv>../inputs/speech.cod outputs/speech.cod.bitstream</argv>
+	<cycles>252631</cycles>
+	<cycles_p_frame>   126310</cycles_p_frame>
+	<MIPS>4.075</MIPS>
+      </Exec>
+      <Exec>
+	<target>decoder</target>
+	<description>decoder</description>
+	<status>PASS</status>
+	<size>4836</size>
+	<input>_QA_PERF_decoder</input>
+	<n_frames>2</n_frames>
+	<sample_p_frame>248</sample_p_frame>
+	<e_freq>8000</e_freq>
+	<argv>../inputs/speech.dec.bitstream outputs/speech.dec</argv>
+	<cycles>500191</cycles>
+	<cycles_p_frame>   250096</cycles_p_frame>
+	<MIPS>8.068</MIPS>
+      </Exec>
+      <Exec>
+	<target>coder_decoder</target>
+	<description>coder_decoder</description>
+	<status>PASS</status>
+	<size>4836</size>
+	<input>_QA_PERF_coder_decoder</input>
+	<n_frames>2</n_frames>
+	<sample_p_frame>248</sample_p_frame>
+	<e_freq>8000</e_freq>
+	<argv>../inputs/speech.cod outputs/speech.codec.bitstream outputs/speech.codec</argv>
+	<cycles>758590</cycles>
+	<cycles_p_frame>   379245</cycles_p_frame>
+	<MIPS>12.234</MIPS>
+      </Exec>
+      <End_date>2004/07/29 17:27:38</End_date>
+    </TEST>
+
+
+    <TEST scn_idx="1">
+      <Test_path>applications/g728/v1</Test_path>
+      <Start_date>2004/07/29 17:27:39</Start_date>
+      <Test_name>G.728_optimized</Test_name>
+      <Host_name>ongaku</Host_name>
+      <Test_mode>performance</Test_mode>
+      <Level>light</Level>
+      <CC_options>-O3 -Og -arch sc140</CC_options>
+      <CFLAGS>-O3 -Og -arch sc140 -mb</CFLAGS>
+      <Makefile>makefile.scc</Makefile>
+      <Make_options>PROTO=BASIC_OP</Make_options>
+      <Simulator>sc100-sim</Simulator>
+      <Sim_options>-arch=sc140 -suppress all</Sim_options>
+      <Targets>
+	<target>coder</target>
+	<target>decoder</target>
+	<target>coder_decoder</target>
+      </Targets>
+      <Exec>
+	<target>coder</target>
+	<description>coder</description>
+	<status>PASS</status>
+	<size>26506</size>
+	<input>_QA_PERF_coder</input>
+	<n_frames>256</n_frames>
+	<sample_p_frame>5</sample_p_frame>
+	<e_freq>8000</e_freq>
+	<argv>../inputs/speech.cod.pcm outputs/speech.cod.bitstream</argv>
+	<cycles>31068811</cycles>
+	<cycles_p_frame>   117456</cycles_p_frame>
+	<MIPS>187.929</MIPS>
+      </Exec>
+      <Exec>
+	<target>decoder</target>
+	<description>decoder postfilt off</description>
+	<status>PASS</status>
+	<size>26506</size>
+	<input>_QA_PERF_decoder</input>
+	<n_frames>256</n_frames>
+	<sample_p_frame>5</sample_p_frame>
+	<e_freq>8000</e_freq>
+	<argv>../inputs/speech.dec.bitstream outputs/speech.dec.pcm 0</argv>
+	<cycles>24862552</cycles>
+	<cycles_p_frame>    88525</cycles_p_frame>
+	<MIPS>141.640</MIPS>
+      </Exec>
+      <Exec>
+	<target>coder_decoder</target>
+	<description>coder_decoder postfilt off</description>
+	<status>PASS</status>
+	<size>26506</size>
+	<input>_QA_PERF_coder_decoder</input>
+	<n_frames>256</n_frames>
+	<sample_p_frame>5</sample_p_frame>
+	<e_freq>8000</e_freq>
+	<argv>../inputs/speech.cod.pcm outputs/speech.tmp.codec.bitstream outputs/speech.codec.pcm 0</argv>
+	<cycles>51739594</cycles>
+	<cycles_p_frame>   207967</cycles_p_frame>
+	<MIPS>332.747</MIPS>
+      </Exec>
+      <End_date>2004/07/29 17:29:00</End_date>
+    </TEST>
+
+
+    <TEST scn_idx="2">
+      <Test_path>applications/ecc/v0</Test_path>
+      <Start_date>2004/07/29 17:29:01</Start_date>
+      <Test_name>     ecc</Test_name>
+      <Host_name>ongaku</Host_name>
+      <Test_mode>performance</Test_mode>
+      <Level>light</Level>
+      <CC_options>-O3 -Og -arch sc140</CC_options>
+      <CFLAGS>-O3 -Og -arch sc140 -D_USE_CW_PROTO_</CFLAGS>
+      <Makefile>makefile.scc</Makefile>
+      <Make_options>PROTO=EMULATE</Make_options>
+      <Simulator>sc100-sim</Simulator>
+      <Sim_options>-arch=sc140 -suppress all</Sim_options>
+      <Targets>
+	<target>decoder</target>
+      </Targets>
+      <Exec>
+	<target>decoder</target>
+	<description>decoder</description>
+	<status>PASS</status>
+	<size>4836</size>
+	<input>_QA_PERF_decoder</input>
+	<n_frames>2</n_frames>
+	<sample_p_frame>248</sample_p_frame>
+	<e_freq>8000</e_freq>
+	<argv>../inputs/speech.dec.bitstream outputs/speech.dec</argv>
+	<cycles>545191</cycles>
+	<cycles_p_frame>   250096</cycles_p_frame>
+	<MIPS>8.068</MIPS>
+      </Exec>
+      <End_date>2004/07/29 17:29:02</End_date>
+    </TEST>
+
+
+    <TEST scn_idx="3">
+      <Test_path>applications/g728/v1</Test_path>
+      <Start_date>2004/07/29 17:29:03</Start_date>
+      <Test_name>G.728_optimized</Test_name>
+      <Host_name>ongaku</Host_name>
+      <Test_mode>performance</Test_mode>
+      <Level>light</Level>
+      <CC_options>-O3 -Og -arch sc140</CC_options>
+      <CFLAGS>-O3 -Og -arch sc140 -D_USE_CW_PROTO_ -mb</CFLAGS>
+      <Makefile>makefile.scc</Makefile>
+      <Make_options>PROTO=EMULATE</Make_options>
+      <Simulator>sc100-sim</Simulator>
+      <Sim_options>-arch=sc140 -suppress all</Sim_options>
+      <Targets>
+	<target>decoder</target>
+      </Targets>
+      <Exec>
+	<target>decoder</target>
+	<description>decoder postfilt off</description>
+	<status>PASS</status>
+	<size>26506</size>
+	<input>_QA_PERF_decoder</input>
+	<n_frames>256</n_frames>
+	<sample_p_frame>5</sample_p_frame>
+	<e_freq>8000</e_freq>
+	<argv>../inputs/speech.dec.bitstream outputs/speech.dec.pcm 0</argv>
+	<cycles>21262552</cycles>
+	<cycles_p_frame>    88525</cycles_p_frame>
+	<MIPS>141.640</MIPS>
+      </Exec>
+      <End_date>2004/07/29 17:29:21</End_date>
+    </TEST>
+
+
+    <End_date>2004/07/29 17:29:33</End_date>
+  </REPORT>
+
+</HISTORY>
+

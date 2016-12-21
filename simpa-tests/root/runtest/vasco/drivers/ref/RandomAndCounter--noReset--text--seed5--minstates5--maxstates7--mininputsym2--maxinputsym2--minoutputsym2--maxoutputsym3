@@ -1,0 +1,14 @@
+
+Checking environment and options
+you can try to do this learning again by running something like 'java main.simpa.SIMPA drivers.mealy.transparent.RandomAndCounterMealyDriver --noReset --minstates 5 --maxstates 7 --mininputsym 2 --maxinputsym 2 --minoutputsym 2 --maxoutputsym 3 --html --text --seed 5 '
+System : Combined(Counter(3);Connex(Random(90)))
+Inferring the system with W=[b, countercounter, aaa] and n=18
+New state discovered : S0 (b/0 , counter/NoReset counter/Reset , a/0 a/0 a/1 , )
+New state discovered : S1 (b/0 , counter/Reset counter/NoReset , a/0 a/0 a/1 , )
+New state discovered : S2 (b/0 , counter/NoReset counter/NoReset , a/0 a/0 a/1 , )
+New state discovered : S3 (b/1 , counter/NoReset counter/Reset , a/1 a/1 a/1 , )
+New state discovered : S4 (b/1 , counter/Reset counter/NoReset , a/1 a/1 a/1 , )
+New state discovered : S5 (b/1 , counter/NoReset counter/NoReset , a/1 a/1 a/1 , )
+New state discovered : S6 (b/1 , counter/NoReset counter/Reset , a/0 a/1 a/1 , )
+New state discovered : S7 (b/1 , counter/Reset counter/NoReset , a/0 a/1 a/1 , )
+New state discovered : S8 (b/1 , counter/NoReset counter/NoReset , a/0 a/1 a/1 , )

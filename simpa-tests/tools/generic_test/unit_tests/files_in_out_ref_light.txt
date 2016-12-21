@@ -1,0 +1,24 @@
+# The lines must contain:
+# sc target;    input file;               description;                launch params;      output file1, reference file1 ; output file2, reference file2 ; ... 
+#
+# the output file can be: stdout
+#
+#for example:
+#coder;         dtx63.tin;                encoder 6.3;                -c -r63 -v dtx63.tin dtx63.xco     ; outputs/dtx63.xco,	ref/dtx63.rco;	
+#coder;         dtx53mix.tin;             encoder 5.3;                -c -r53 -v dtx53mix.tin dtx53.xco  ; outputs/dtx53.xco,	ref/dtx53.rco;	
+#----------------------------------------------------------------------------------------------------------
+
+# Encoder sequences :
+
+coder;     inputs/speech.cod.pcm;         coder;                      "inputs/speech.cod.pcm outputs/speech.cod.bitstream"; outputs/speech.cod.bitstream, ref/speech.cod.bitstream
+
+
+# Decoder sequences :
+
+decoder;   inputs/speech.dec.bitstream;   decoder postfilt off;       "inputs/speech.dec.bitstream  outputs/speech.dec.pcm  0";  outputs/speech.dec.pcm, ref/speech.dec.pcm
+
+
+# Coder_decoder sequences :
+
+coder_decoder;  inputs/speech.codec.pcm;  coder_decoder postfilt off; "inputs/speech.codec.pcm outputs/speech.tmp.codec.bitstream outputs/speech.codec.pcm 0"; outputs/speech.tmp.codec.bitstream, ref/speech.tmp.codec.bitstream ; outputs/speech.codec.pcm, ref/speech.codec.pcm;     
+

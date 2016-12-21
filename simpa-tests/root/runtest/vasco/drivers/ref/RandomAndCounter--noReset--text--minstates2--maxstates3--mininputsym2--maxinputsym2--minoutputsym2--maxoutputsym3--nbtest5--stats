@@ -1,0 +1,63 @@
+
+Checking environment and options
+[+] Testing 5 automaton
+	1/5
+you can try to do this learning again by running something like 'java main.simpa.SIMPA drivers.mealy.transparent.RandomAndCounterMealyDriver --noReset --minstates 2 --maxstates 3 --mininputsym 2 --maxinputsym 2 --minoutputsym 2 --maxoutputsym 3 --html --text --seed -2335527263009067485 '
+System : Combined(Counter(3);Connex(Random(90)))
+Inferring the system with W=[a, countercounter] and n=6
+New state discovered : S0 (a/0 , counter/NoReset counter/NoReset , )
+New state discovered : S1 (a/0 , counter/Reset counter/NoReset , )
+New state discovered : S2 (a/0 , counter/NoReset counter/Reset , )
+New state discovered : S3 (a/1 , counter/Reset counter/NoReset , )
+New state discovered : S4 (a/1 , counter/NoReset counter/NoReset , )
+New state discovered : S5 (a/1 , counter/NoReset counter/Reset , )
+info: AdenilsoSimaoTool 'n-complete-exhaustive' tool is missing, the minLengthForExhaustivAutomata() will not be computed.
+The computed conjecture is exact
+End
+	2/5
+you can try to do this learning again by running something like 'java main.simpa.SIMPA drivers.mealy.transparent.RandomAndCounterMealyDriver --noReset --minstates 2 --maxstates 3 --mininputsym 2 --maxinputsym 2 --minoutputsym 2 --maxoutputsym 3 --html --text --seed 7296960646242726244 '
+System : Combined(Counter(3);Connex(Random(90)))
+Inferring the system with W=[a, countercounter] and n=6
+New state discovered : S0 (a/1 , counter/NoReset counter/NoReset , )
+New state discovered : S1 (a/1 , counter/Reset counter/NoReset , )
+New state discovered : S2 (a/1 , counter/NoReset counter/Reset , )
+New state discovered : S3 (a/2 , counter/Reset counter/NoReset , )
+New state discovered : S4 (a/2 , counter/NoReset counter/NoReset , )
+New state discovered : S5 (a/2 , counter/NoReset counter/Reset , )
+info: AdenilsoSimaoTool 'n-complete-exhaustive' tool is missing, the minLengthForExhaustivAutomata() will not be computed.
+The computed conjecture is exact
+End
+	3/5
+you can try to do this learning again by running something like 'java main.simpa.SIMPA drivers.mealy.transparent.RandomAndCounterMealyDriver --noReset --minstates 2 --maxstates 3 --mininputsym 2 --maxinputsym 2 --minoutputsym 2 --maxoutputsym 3 --html --text --seed -8938777779763670796 '
+System : Combined(Counter(3);Connex(Random(90)))
+End
+	4/5
+you can try to do this learning again by running something like 'java main.simpa.SIMPA drivers.mealy.transparent.RandomAndCounterMealyDriver --noReset --minstates 2 --maxstates 3 --mininputsym 2 --maxinputsym 2 --minoutputsym 2 --maxoutputsym 3 --html --text --seed -2406887219999847078 '
+System : Combined(Counter(3);Connex(Random(90)))
+Inferring the system with W=[b, countercounter] and n=6
+New state discovered : S0 (b/1 , counter/NoReset counter/NoReset , )
+New state discovered : S1 (b/1 , counter/Reset counter/NoReset , )
+New state discovered : S2 (b/1 , counter/NoReset counter/Reset , )
+New state discovered : S3 (b/0 , counter/Reset counter/NoReset , )
+New state discovered : S4 (b/0 , counter/NoReset counter/NoReset , )
+New state discovered : S5 (b/0 , counter/NoReset counter/Reset , )
+info: AdenilsoSimaoTool 'n-complete-exhaustive' tool is missing, the minLengthForExhaustivAutomata() will not be computed.
+The computed conjecture is exact
+End
+	5/5
+you can try to do this learning again by running something like 'java main.simpa.SIMPA drivers.mealy.transparent.RandomAndCounterMealyDriver --noReset --minstates 2 --maxstates 3 --mininputsym 2 --maxinputsym 2 --minoutputsym 2 --maxoutputsym 3 --html --text --seed 1747934843367763354 '
+System : Combined(Counter(3);Connex(Random(90)))
+Inferring the system with W=[a, ba, countercounter] and n=9
+New state discovered : S0 (a/0 , b/1 a/0 , counter/NoReset counter/NoReset , )
+New state discovered : S1 (a/0 , b/1 a/0 , counter/Reset counter/NoReset , )
+New state discovered : S2 (a/0 , b/1 a/0 , counter/NoReset counter/Reset , )
+New state discovered : S3 (a/0 , b/1 a/1 , counter/Reset counter/NoReset , )
+New state discovered : S4 (a/0 , b/1 a/1 , counter/NoReset counter/NoReset , )
+New state discovered : S5 (a/0 , b/1 a/1 , counter/NoReset counter/Reset , )
+New state discovered : S6 (a/1 , b/1 a/0 , counter/NoReset counter/NoReset , )
+New state discovered : S7 (a/1 , b/1 a/0 , counter/Reset counter/NoReset , )
+New state discovered : S8 (a/1 , b/1 a/0 , counter/NoReset counter/Reset , )
+info: AdenilsoSimaoTool 'n-complete-exhaustive' tool is missing, the minLengthForExhaustivAutomata() will not be computed.
+The computed conjecture is exact
+End
+[+] End

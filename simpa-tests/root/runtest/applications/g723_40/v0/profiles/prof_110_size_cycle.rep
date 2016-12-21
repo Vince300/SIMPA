@@ -1,0 +1,27 @@
+#                                          module`function       nb     size     size     size          nb   cycles   cycles   cycles   cycles
+#                                                            inline   inline   inline function       calls      min      max      avg  std.dev
+#                                                                    average  std.dev                                                         
+
+                                       encode`_pack_output        0        0        0       80          26       15        0       24        0
+                                g721_encoder`_g721_encoder        0        0        0      188          26      111        0      111        0
+                                      decode`_unpack_input        0        0        0      128          27       27        0       48        0
+                                g721_decoder`_g721_decoder        0        0        0      178          26      106        0      106        0
+                                                main`_main        0        0        0      148           1      428        0      428        0
+                                            encode`_encode        1      160        0        0           1      633        0      633        0
+                                            decode`_decode        1      134        0        0           1      547        0      547        0
+                                         g711`_ulaw2linear        0        0        0       48          52       19        0       19        0
+                                              g711`_search        0        0        0       32          26       13        0       23        0
+                                     g72x`_g72x_init_state        0        0        0       90           2       40        0       40        0
+                                                g72x`_quan        0        0        0       36         622       16        0       93        0
+                                               g72x`_fmult        0        0        0      130         416       55        0       61        0
+                                      g72x`_predictor_zero        0        0        0       50          52       93        0       93        0
+                                      g72x`_predictor_pole        0        0        0       44          52       32        0       32        0
+                                           g72x`_step_size        0        0        0       96          52        9        0       24        0
+                                            g72x`_quantize        0        0        0      102          52       50        0       50        0
+                                         g72x`_reconstruct        0        0        0       82          52       15        0       30        0
+                                              g72x`_update        0        0        0      946          52      344        0      434        0
+                                  g72x`_tandem_adjust_ulaw        0        0        0      166          26       40        0       40        0
+                                         g711`_linear2ulaw        1       72        0        0          26       27        0       27        0
+                                         check`_check_data        0        0        0       32           2      146        0      289        0
+                     Global symbol`___CW_SC100_callee_save        0        0        0       26         729        8        0        8        0
+                  Global symbol`___CW_SC100_callee_restore        0        0        0       14         729        5        0        6        0

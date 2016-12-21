@@ -1,0 +1,36 @@
+
+Checking environment and options
+you can try to do this learning again by running something like 'java main.simpa.SIMPA drivers.mealy.transparent.RandomAndCounterMealyDriver --noReset --minstates 1 --maxstates 2 --mininputsym 2 --maxinputsym 3 --minoutputsym 2 --maxoutputsym 2 --html --text --seed 4321 '
+System : Combined(Counter(3);Connex(Random(90)))
+Inferring the system with W=[countercounter] and n=3
+New state discovered : S0 (counter/NoReset counter/NoReset , )
+New state discovered : S1 (counter/NoReset counter/Reset , )
+New state discovered : S2 (counter/Reset counter/NoReset , )
+   counter/NoReset    counter/NoReset    counter/Reset    counter/NoReset   
+S0---------------->S1---------------->S2-------------->S0---------------->S1
+
+ counter/NoReset    counter/Reset    a/0    counter/NoReset   
+---------------->S2-------------->S0---->S0---------------->S1
+
+ counter/NoReset    a/0    counter/Reset    counter/NoReset    a/0   
+---------------->S2---->S2-------------->S0---------------->S1---->S1
+
+ counter/NoReset    counter/Reset    b/1    counter/NoReset   
+---------------->S2-------------->S0---->S0---------------->S1
+
+ counter/NoReset    b/1    counter/Reset    counter/NoReset    b/1   
+---------------->S2---->S2-------------->S0---------------->S1---->S1
+
+ counter/NoReset    counter/Reset    c/0    counter/NoReset   
+---------------->S2-------------->S0---->S0---------------->S1
+
+ counter/NoReset    c/0    counter/Reset    counter/NoReset    c/0   
+---------------->S2---->S2-------------->S0---------------->S1---->S1
+
+ counter/NoReset    counter/Reset   
+---------------->S2-------------->S0
+
+info: AdenilsoSimaoTool 'n-complete-exhaustive' tool is missing, the minLengthForExhaustivAutomata() will not be computed.
+The computed conjecture is exact
+End
+[+] End

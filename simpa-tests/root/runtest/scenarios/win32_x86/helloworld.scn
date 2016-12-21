@@ -1,0 +1,8 @@
+O0 =	-O0
+O4 =	-O4
+cc_opt = (O0, O4)
+
+### win32_x86 makefile for MWCC and no simulator
+win32_x86_default = -m makefile.win32_x86 -s none
+
+unit_tests/helloworld/v0		cc_opt win32_x86_default

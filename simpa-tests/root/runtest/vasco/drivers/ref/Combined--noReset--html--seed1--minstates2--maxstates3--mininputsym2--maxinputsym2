@@ -1,0 +1,36 @@
+
+Checking environment and options
+you can try to do this learning again by running something like 'java main.simpa.SIMPA drivers.mealy.transparent.CombinedMealyDriver --noReset --minstates 2 --maxstates 3 --mininputsym 2 --maxinputsym 2 --html --text --seed 1 '
+System : Combined(Counter(2);Counter(3))
+Inferring the system with W=[jji] and n=6
+New state discovered : S0 (j/NoReset j/NoReset i/NoReset , )
+New state discovered : S1 (j/Reset j/NoReset i/Reset , )
+New state discovered : S2 (j/NoReset j/Reset i/NoReset , )
+New state discovered : S3 (j/NoReset j/NoReset i/Reset , )
+New state discovered : S4 (j/Reset j/NoReset i/NoReset , )
+New state discovered : S5 (j/NoReset j/Reset i/Reset , )
+   j/NoReset    j/NoReset    i/NoReset    j/Reset    j/NoReset    i/Reset   
+S0---------->S2---------->S4---------->S1-------->S3---------->S5-------->S2
+
+ j/NoReset    j/Reset    i/NoReset    j/NoReset    j/NoReset    i/Reset   
+---------->S4-------->S0---------->S3---------->S5---------->S1-------->S4
+
+ j/Reset    j/NoReset    i/NoReset    j/NoReset    j/Reset    i/Reset   
+-------->S0---------->S2---------->S5---------->S1-------->S3-------->S0
+
+ j/NoReset    j/NoReset    i/NoReset    i/Reset    j/Reset    j/NoReset   
+---------->S2---------->S4---------->S1-------->S4-------->S0---------->S2
+
+ i/NoReset    i/Reset    j/NoReset    j/Reset    i/NoReset    i/Reset   
+---------->S5-------->S2---------->S4-------->S0---------->S3-------->S0
+
+ j/NoReset    j/NoReset    i/NoReset    j/Reset    j/NoReset    j/NoReset   
+---------->S2---------->S4---------->S1-------->S3---------->S5---------->S1
+
+ i/Reset    i/NoReset    j/Reset    j/NoReset    i/Reset   
+-------->S4---------->S1-------->S3---------->S5-------->S2
+
+info: AdenilsoSimaoTool 'n-complete-exhaustive' tool is missing, the minLengthForExhaustivAutomata() will not be computed.
+The computed conjecture is exact
+End
+[+] End

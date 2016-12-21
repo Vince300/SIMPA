@@ -1,0 +1,18 @@
+{
+  "basicAuthUser" : null,
+  "basicAuthPass" : null,
+  "name" : "Garros",
+  "limitSelector" : null,
+  "noFollow" : [ "^javascript:", "^http://", "#" ],
+  "actionByParameter" :null,
+  "mergeInputs" : false,
+  "smallestSet" : false,
+  "urls" : [ "http://ensimag.grenoble-inp.fr/" ],
+  "data" : {
+    "manager" : ["110"],
+    "employee_id" : ["111"],
+    "password" : ["john"],
+    "search_name" : ["Bruce"]
+  }
+}
+

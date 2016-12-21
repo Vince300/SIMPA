@@ -1,0 +1,8 @@
+# Filename ;              number of frames ; number of samples per frame ; frequency of acquisition of the samples (Hz)
+chkl.cod.pcm ;         4254 ;               2 ;                           8000
+chkl.dec.bitstream ;   4254 ;               2 ;                           8000
+
+_QA_PERF_coder ;         20		 ; 2 ;  			 8000
+_QA_PERF_decoder ;       20		 ; 2 ;  			 8000
+_QA_PERF_coder_decoder ; 20		 ; 2 ;  			 8000
+

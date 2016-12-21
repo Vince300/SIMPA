@@ -1,0 +1,113 @@
+Author:
+	Yves Guerte
+Date:
+	march, 30st of 2001
+
+Perl files (we assume they are in ${QA_TOOLS}/mutex):
+	lock.pl unlock.pl
+        semaphores.pm
+
+Usage:
+	lock.pl   FILE
+	unlock.pl FILE
+
+Description:
+	A file "fname" is locked when there exist the file "fname.lock" at the same place.
+
+	The file "fname.lock" contains the process-id of the process who has locked the file
+	and the date of the lock.
+
+	lock.pl return 0 if the lock has been completed or 255 if the file is already locked.
+	(with tcsh, test the $status variable).
+
+	unlock.pl always return 0 but reports "File fname is already unlocked." on STDERR.
+
+	Never modify the file "fname.lock" nor "fname.locklock" by hand until you want to
+	force the deletion of the lock (for example if the process user of the lock has been 
+	shut down). In this case, delete the file "fname.lock" (but be sure there is nobody 
+	else who want the file to be locked).
+
+Examples:
+This shell script tries to lock the file "toto.tcsh" until it succeeds.
+
+	#!/bin/tcsh
+	# file toto.tcsh must exist
+	#
+	onintr -
+	lock.pl toto.tcsh
+	set res=$status
+	onintr BREAK_lock_toto
+	#
+	while ( $res )
+	   echo "Waiting to access to toto.tcsh"
+	   sleep 2
+	   lock.pl toto.tcsh
+	   set res=$status
+	end
+	goto after_BREAK_lock_toto
+	#
+	BREAK_lock_toto:
+	unlock.pl toto.tcsh
+	exit 1
+	after_BREAK_lock_toto:
+
+	# use toto.tcsh
+
+	unlock.pl toto.tcsh
+	onintr
+
+
+This Perl exerpt shows how to use securely the library:
+
+    use lib "$ENV{QA_TOOLS}/mutex" ;
+    use semaphores ;
+
+    # Flag $is_locked_by_me{"fname"} indicates if our process has already locked the file "fname"
+    #
+    %is_locked_by_me = () ;
+
+    # -------------------------------------------------
+    # Secured lock/unlock against user break
+    #
+    sub sec_lock {
+        my $FILE = shift(@_) ;
+        if (! ($FILE =~ '^/')) {
+            my $cur = `pwd` ;
+            chomp $cur ;
+            $FILE = $cur . '/' . $FILE ;
+        }
+        if (not($is_locked_by_me{$FILE})) {
+            {
+            local $SIG{INT}  = 'IGNORE' ;
+            local $SIG{QUIT} = 'IGNORE' ;
+            local $SIG{PIPE} = 'IGNORE' ;
+            $is_locked_by_me{$FILE} = lock($FILE) ;
+            }
+        }
+        return ($is_locked_by_me{$FILE}) ;
+    }
+    sub sec_unlock {
+        my $FILE = shift(@_) ;
+        if (! ($FILE =~ '^/')) {
+            my $cur = `pwd` ;
+            chomp $cur ;
+            $FILE = $cur . '/' . $FILE ;
+        }
+        if ($is_locked_by_me{$FILE}) {
+            {
+            local $SIG{INT}  = 'IGNORE' ;
+            local $SIG{QUIT} = 'IGNORE' ;
+            local $SIG{PIPE} = 'IGNORE' ;
+            $is_locked_by_me{$FILE} = not(unlock($FILE)) ;
+            }
+        }
+        return not($is_locked_by_me{$FILE}) ;
+    }
+    sub sec_clean_locks {
+        while (($file, $key) = each(%is_locked_by_me)) {
+            if ($key) {
+                    sec_unlock("$file") ;
+                }
+            }
+    }
+

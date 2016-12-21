@@ -1,0 +1,8 @@
+applications/*/v*
+standards/*/v*
+unit_tests/*/v*
+bug_reports/*/v*
+customers/*/*/v*
+
+vasco/*/v*
+

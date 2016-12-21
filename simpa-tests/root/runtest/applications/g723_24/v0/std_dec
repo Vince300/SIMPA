@@ -1,0 +1,81 @@
+input : ˆ (136)
+dec, frame=0, 0 bytes written
+outputD: þ (254)
+dec, frame=1, 1 bytes written
+outputD: ý (253)
+input : ˆ (136)
+dec, frame=2, 2 bytes written
+outputD: ú (250)
+dec, frame=3, 3 bytes written
+outputD: w (119)
+dec, frame=4, 4 bytes written
+outputD: þ (254)
+input : ˜ (152)
+dec, frame=5, 5 bytes written
+outputD: ü (252)
+dec, frame=6, 6 bytes written
+outputD: | (124)
+dec, frame=7, 7 bytes written
+outputD: v (118)
+input : ™ (153)
+dec, frame=8, 8 bytes written
+outputD: ú (250)
+dec, frame=9, 9 bytes written
+outputD: ð (240)
+input : º (186)
+dec, frame=10, 10 bytes written
+outputD: ï (239)
+dec, frame=11, 11 bytes written
+outputD: n (110)
+dec, frame=12, 12 bytes written
+outputD: æ (230)
+input : Ë (203)
+dec, frame=13, 13 bytes written
+outputD: ý (253)
+dec, frame=14, 14 bytes written
+outputD: ä (228)
+dec, frame=15, 15 bytes written
+outputD: m (109)
+input : Ü (220)
+dec, frame=16, 16 bytes written
+outputD: Z (90)
+dec, frame=17, 17 bytes written
+outputD: Ì (204)
+input : í (237)
+dec, frame=18, 18 bytes written
+outputD: ø (248)
+dec, frame=19, 19 bytes written
+outputD: X (88)
+dec, frame=20, 20 bytes written
+outputD: [ (91)
+input : í (237)
+dec, frame=21, 21 bytes written
+outputD: Â (194)
+dec, frame=22, 22 bytes written
+outputD: ´ (180)
+dec, frame=23, 23 bytes written
+outputD: o (111)
+input : î (238)
+dec, frame=24, 24 bytes written
+outputD: @ (64)
+dec, frame=25, 25 bytes written
+outputD: 9 (57)
+input : î (238)
+dec, frame=26, 26 bytes written
+outputD: ¬ (172)
+dec, frame=27, 27 bytes written
+outputD: Ô (212)
+dec, frame=28, 28 bytes written
+outputD: 9 (57)
+input : î (238)
+dec, frame=29, 29 bytes written
+outputD: . (46)
+dec, frame=30, 30 bytes written
+outputD: ¤ (164)
+dec, frame=31, 31 bytes written
+outputD: Æ (198)
+input : ï (239)
+dec, frame=32, 32 bytes written
+outputD: H (72)
+dec, frame=33, 33 bytes written
+outputD: ( (40)

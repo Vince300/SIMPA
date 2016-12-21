@@ -1,0 +1,85 @@
+%include "stdvars.scn"
+
+# %define TEST_UNIT
+
+makefile =              makefile.gcc
+simulator =             none
+# make_opt =              -mo ("PROTO=NPR","PROTO=BASIC_OP","PROTO=EMULATE")
+make_opt =              -mo ("PROTO=NPR")
+sim_opt =               
+comp_opt =              O3 Os -Wall
+level =                 -l light
+
+cc_opt =        -m makefile make_opt -s simulator sim_opt  comp_opt
+
+
+# CONTENT:
+
+%ifdef TEST_UNIT
+
+standards/dhry/v0                       level  -f  cc_opt
+standards/pstone/v0                     level  -f  cc_opt
+# not GCC aware : standards/plumhall/v0                   scc_big_comp_opt
+
+unit_tests/benchmarks_loop/v0           level  -f  cc_opt
+unit_tests/c6xx/v0                      level  -f  cc_opt
+unit_tests/intrinsics/v0                level  -f  cc_opt
+unit_tests/user_tests/v0                level  -f  cc_opt
+# not GCC aware : unit_tests/asm_functions/v0             scc_big_comp_opt
+# not GCC aware : unit_tests/check_s1/v0                  scc_big_comp_opt
+# not GCC aware : unit_tests/mem_align/v0                 scc_big_comp_opt
+
+customers/mot-wisd/lms_rls/v0/  scc_big_comp_opt
+
+%else
+
+applications/amr/v0             level  -p  cc_opt
+applications/ecc/v0             level  -p  cc_opt
+applications/efr/v0             level  -p  cc_opt
+applications/evr/v0             level  -p  cc_opt
+applications/g721/v0            level  -p  cc_opt
+applications/g722/v0            level  -p  cc_opt
+applications/g723/v0            level  -p  cc_opt
+applications/g723_24/v0         level  -p  cc_opt
+applications/g723_40/v0         level  -p  cc_opt
+#applications/g728/v0            level  -p  cc_opt
+#applications/g728/v0.1          level  -p  cc_opt
+applications/g728/v1            level  -p  cc_opt
+applications/g729ab/v0          level  -p  cc_opt
+#applications/g729i/v0           level  -p  cc_opt
+applications/g729i/v1           level  -p  cc_opt
+applications/gsm-1.0-pl9DSP/v0  level  -p  cc_opt -t coder
+applications/gsm-1.0-pl10/v0    level  -p  cc_opt
+applications/hr/v0              level  -p  cc_opt 
+applications/jpeg/v0            level  -p  cc_opt
+applications/jpeg2000_vm9.0/v0  level  -p  cc_opt
+applications/mp3_cf2/v0         level  -p  cc_opt -t decoder 
+applications/mpeg4/v0           level  -p  cc_opt
+applications/wb_amr/v0          level  -p  cc_opt 
+
+
+#applications/amr/v0             level  -f  cc_opt
+#applications/ecc/v0             level  -f  cc_opt
+#applications/efr/v0             level  -f  cc_opt
+#applications/evr/v0             level  -f  cc_opt
+#applications/g721/v0            level  -f  cc_opt
+#applications/g722/v0            level  -f  cc_opt
+#applications/g723/v0            level  -f  cc_opt
+#applications/g723_24/v0         level  -f  cc_opt
+#applications/g723_40/v0         level  -f  cc_opt
+##applications/g728/v0            level  -f  cc_opt
+##applications/g728/v0.1          level  -f  cc_opt
+#applications/g728/v1            level  -f  cc_opt
+#applications/g729ab/v0          level  -f  cc_opt
+##applications/g729i/v0           level  -f  cc_opt
+#applications/g729i/v1           level  -f  cc_opt
+#applications/gsm-1.0-pl9DSP/v0  level  -f  cc_opt -t coder
+#applications/gsm-1.0-pl10/v0    level  -f  cc_opt
+#applications/hr/v0              level  -f  cc_opt 
+#applications/jpeg/v0            level  -f  cc_opt
+#applications/jpeg2000_vm9.0/v0  level  -f  cc_opt
+#applications/mp3_cf2/v0         level  -f  cc_opt -t decoder
+#applications/mpeg4/v0           level  -f  cc_opt
+#applications/wb_amr/v0          level  -f  cc_opt
+
+%endif

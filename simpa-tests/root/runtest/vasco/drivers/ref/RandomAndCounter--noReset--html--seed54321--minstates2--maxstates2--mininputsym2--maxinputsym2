@@ -1,0 +1,105 @@
+
+Checking environment and options
+you can try to do this learning again by running something like 'java main.simpa.SIMPA drivers.mealy.transparent.RandomAndCounterMealyDriver --noReset --minstates 2 --maxstates 2 --mininputsym 2 --maxinputsym 2 --html --text --seed 54321 '
+System : Combined(Counter(3);Connex(Random(90)))
+Inferring the system with W=[a, countercounter] and n=6
+New state discovered : S0 (a/3 , counter/NoReset counter/NoReset , )
+New state discovered : S1 (a/3 , counter/Reset counter/NoReset , )
+New state discovered : S2 (a/3 , counter/NoReset counter/Reset , )
+New state discovered : S3 (a/2 , counter/Reset counter/NoReset , )
+New state discovered : S4 (a/2 , counter/NoReset counter/NoReset , )
+New state discovered : S5 (a/2 , counter/NoReset counter/Reset , )
+  a/3   a/3   a/3   a/3   a/3   a/3   a/3   a/3   a/3   a/3   a/3   
+?---->?---->?---->?---->?---->?---->?---->?---->?---->?---->?---->S0
+
+ counter/NoReset    counter/NoReset    a/3    a/3    a/3    a/3    a/3    a/3   
+---------------->S2---------------->S1---->S1---->S1---->S1---->S1---->S1---->S1
+
+ a/3    a/3    a/3    a/3    a/3    a/3    counter/Reset    counter/NoReset   
+---->S1---->S1---->S1---->S1---->S1---->S1-------------->S0---------------->S2
+
+ a/3    a/3    a/3    a/3    a/3    a/3    a/3    a/3    a/3    a/3    a/3   
+---->S2---->S2---->S2---->S2---->S2---->S2---->S2---->S2---->S2---->S2---->S2
+
+ a/3    counter/NoReset    counter/Reset    a/3    a/3    a/3    a/3    a/3   
+---->S2---------------->S1-------------->S0---->S0---->S0---->S0---->S0---->S0
+
+ a/3    a/3    a/3    a/3    a/3    a/3    a/3    counter/NoReset   
+---->S0---->S0---->S0---->S0---->S0---->S0---->S0---------------->S2
+
+ counter/NoReset    counter/Reset    counter/NoReset    a/3    a/3    a/3   
+---------------->S1-------------->S0---------------->S2---->S2---->S2---->S2
+
+ a/3    a/3    a/3    a/3    a/3    a/3    a/3    a/3    counter/NoReset   
+---->S2---->S2---->S2---->S2---->S2---->S2---->S2---->S2---------------->S1
+
+ counter/Reset    counter/NoReset    counter/NoReset    a/3    counter/Reset   
+-------------->S0---------------->S2---------------->S1---->S1-------------->S0
+
+ counter/NoReset    a/3    a/3    a/3    a/3    a/3    a/3    a/3    a/3   
+---------------->S2---->S2---->S2---->S2---->S2---->S2---->S2---->S2---->S2
+
+ a/3    a/3    a/3    counter/NoReset    counter/Reset    a/3   
+---->S2---->S2---->S2---------------->S1-------------->S0---->S0
+
+ counter/NoReset    counter/NoReset    b/1    a/2    a/3    a/3    a/3    a/3   
+---------------->S2---------------->S1---->S3---->S1---->S1---->S1---->S1---->S1
+
+ a/3    a/3    a/3    a/3    a/3    a/3    a/3    counter/Reset   
+---->S1---->S1---->S1---->S1---->S1---->S1---->S1-------------->S0
+
+ counter/NoReset    counter/NoReset    counter/Reset    b/1    a/2    a/3   
+---------------->S2---------------->S1-------------->S0---->S4---->S0---->S0
+
+ a/3    a/3    a/3    a/3    a/3    a/3    a/3    a/3    a/3    a/3   
+---->S0---->S0---->S0---->S0---->S0---->S0---->S0---->S0---->S0---->S0
+
+ counter/NoReset    counter/NoReset    b/1    counter/Reset   
+---------------->S2---------------->S1---->S3-------------->S4
+
+ counter/NoReset    a/2    a/3    a/3    a/3    a/3    a/3    a/3    a/3   
+---------------->S5---->S2---->S2---->S2---->S2---->S2---->S2---->S2---->S2
+
+ a/3    a/3    a/3    counter/NoReset    counter/Reset    b/1   
+---->S2---->S2---->S2---------------->S1-------------->S0---->S4
+
+ counter/NoReset    counter/NoReset    a/2    a/3    a/3    a/3    a/3    a/3   
+---------------->S5---------------->S3---->S1---->S1---->S1---->S1---->S1---->S1
+
+ a/3    a/3    a/3    a/3    a/3    counter/Reset    counter/NoReset    b/1   
+---->S1---->S1---->S1---->S1---->S1-------------->S0---------------->S2---->S5
+
+ a/2    a/3    a/3    a/3    a/3    a/3    a/3    a/3    a/3    a/3    a/3   
+---->S2---->S2---->S2---->S2---->S2---->S2---->S2---->S2---->S2---->S2---->S2
+
+ a/3    counter/NoReset    counter/Reset    counter/NoReset    a/3    b/1   
+---->S2---------------->S1-------------->S0---------------->S2---->S2---->S5
+
+ counter/NoReset    counter/Reset    a/2    a/3    a/3    a/3    a/3    a/3   
+---------------->S3-------------->S4---->S0---->S0---->S0---->S0---->S0---->S0
+
+ a/3    a/3    a/3    a/3    a/3    counter/NoReset    counter/NoReset    b/1   
+---->S0---->S0---->S0---->S0---->S0---------------->S2---------------->S1---->S3
+
+ b/1    a/3    a/3    a/3    a/3    a/3    a/3    a/3    a/3    a/3    a/3   
+---->S1---->S1---->S1---->S1---->S1---->S1---->S1---->S1---->S1---->S1---->S1
+
+ a/3    a/3    counter/Reset    counter/NoReset    b/1    b/1    a/3    a/3   
+---->S1---->S1-------------->S0---------------->S2---->S5---->S2---->S2---->S2
+
+ a/3    a/3    a/3    a/3    a/3    a/3    a/3    a/3    a/3    a/3   
+---->S2---->S2---->S2---->S2---->S2---->S2---->S2---->S2---->S2---->S2
+
+ counter/NoReset    counter/Reset    b/1    b/1    a/3    a/3    a/3    a/3   
+---------------->S1-------------->S0---->S4---->S0---->S0---->S0---->S0---->S0
+
+ a/3    a/3    a/3    a/3    a/3    a/3    a/3    a/3    counter/NoReset   
+---->S0---->S0---->S0---->S0---->S0---->S0---->S0---->S0---------------->S2
+
+ counter/NoReset   
+---------------->S1
+
+info: AdenilsoSimaoTool 'n-complete-exhaustive' tool is missing, the minLengthForExhaustivAutomata() will not be computed.
+The computed conjecture is exact
+End
+[+] End

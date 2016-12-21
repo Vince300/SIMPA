@@ -1,0 +1,11 @@
+## Remove the # first character to enable the option as a default one
+-trace
+-nogetqa
+-getlib
+-cleantmpcc
+-nofill
+-sleep 0
+-hinetd
+# -shareddrive Z
+# -qastation taillefer
+# -scenario valid_generic_5_pc.scn

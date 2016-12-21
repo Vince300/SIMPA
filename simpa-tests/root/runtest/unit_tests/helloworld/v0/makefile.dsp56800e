@@ -1,0 +1,5 @@
+MAKEFILENAME = makefile.dsp56800e
+
+CC = dsp56800e
+
+include ./makefile

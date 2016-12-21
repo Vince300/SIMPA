@@ -1,0 +1,20 @@
+{
+  "basicAuthUser" : "guest",
+  "basicAuthPass" : "guest",
+  "name" : "WebGoat_Stored_XSS",
+  "limitSelector" : "#lesson_wrapper",
+  "noFollow" : [ "^javascript:", "^http://" ],
+  "cookies" : "JSESSIONID=D081069197384F4A4B2A31772A5A1AA8",
+  "reset" : "http://localhost:8080/WebGoat/attack?Screen=20&menu=900&Restart=20",
+  "actionByParameter" : "action",
+  "mergeInputs" : false,
+  "smallestSet" : false,
+  "urls" : [ "http://localhost:8080/WebGoat/attack?Screen=20&menu=900&stage=1" ],
+  "data" : {
+    "manager" : ["110"],
+    "employee_id" : ["111"],
+    "password" : ["john"],
+    "search_name" : ["Bruce"]
+  }
+}
+

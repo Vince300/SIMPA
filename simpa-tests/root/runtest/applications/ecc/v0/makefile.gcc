@@ -1,0 +1,5 @@
+MAKEFILENAME = makefile.gcc
+
+CC = gcc
+
+include ./makefile

@@ -1,0 +1,5 @@
+MAKEFILENAME = makefile.win32_x86
+
+CC = win32_x86
+
+include ./makefile

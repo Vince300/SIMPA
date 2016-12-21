@@ -1,0 +1,10 @@
+digraph G {
+	S0 -> S1 [label="a/0"];
+	S0 -> S2 [label="b/1"];
+	S1 -> S3 [label="c/0"];
+	S1 -> S4 [label="a/1"];
+	S4 -> S5 [label="b/0"];	
+	S4 -> S6 [label="c/1"];	
+	S0 [shape=doubleoctagon]
+}
+
