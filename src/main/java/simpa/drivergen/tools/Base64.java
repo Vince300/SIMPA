@@ -1,4 +1,4 @@
-package simpa.hit.tools;
+package simpa.drivergen.tools;
 
 public class Base64
 {

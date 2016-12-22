@@ -1,5 +1,8 @@
 grammar DotMealy;
 
+@header {
+package simpa.hit.tools.antlr4;
+}
 		
 graph
 	:	STRICT? ( GRAPH | DIGRAPH ) ID? '{' mealy_list '}' 

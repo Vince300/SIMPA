@@ -1,11 +1,11 @@
-package simpa.hit.main.drivergen;
+package simpa.drivergen.main.drivergen;
 
 import java.io.IOException;
 
 import org.codehaus.jackson.JsonParseException;
 import org.codehaus.jackson.map.JsonMappingException;
 
-import simpa.hit.crawler.DriverGenerator;
+import simpa.drivergen.crawler.DriverGenerator;
 
 
 public class Main {
@@ -24,12 +24,12 @@ public class Main {
 		try {			
 			for(i = 0; i < args.length; i++){
 				if (args[i].equals("--help") || args[i].equals("-h")) usage();
-				else if (args[i].equals("--css")) simpa.hit.main.drivergen.Options.CSS = true;
-				else if (args[i].equals("--js")) simpa.hit.main.drivergen.Options.JS = true;
-				else if (args[i].equals("--timeout")) simpa.hit.main.drivergen.Options.TIMEOUT = Integer.parseInt(args[++i]);
-				else simpa.hit.main.drivergen.Options.INPUT = args[i];
+				else if (args[i].equals("--css")) simpa.drivergen.main.drivergen.Options.CSS = true;
+				else if (args[i].equals("--js")) simpa.drivergen.main.drivergen.Options.JS = true;
+				else if (args[i].equals("--timeout")) simpa.drivergen.main.drivergen.Options.TIMEOUT = Integer.parseInt(args[++i]);
+				else simpa.drivergen.main.drivergen.Options.INPUT = args[i];
 			}			
-			if (simpa.hit.main.drivergen.Options.INPUT.isEmpty()) usage();
+			if (simpa.drivergen.main.drivergen.Options.INPUT.isEmpty()) usage();
 		} catch (NumberFormatException e) {
 			System.err.println("Error parsing argument (number) : " + args[i]);
 			System.exit(0);
@@ -39,7 +39,7 @@ public class Main {
 	public static void launch(){
 		DriverGenerator g;
 		try {
-			g = new DriverGenerator(simpa.hit.main.drivergen.Options.INPUT);
+			g = new DriverGenerator(simpa.drivergen.main.drivergen.Options.INPUT);
 			g.start();
 			g.exportToDot();
 			g.exportToXML();
@@ -72,8 +72,8 @@ public class Main {
 		System.out.println("Options");
 		System.out.println("> Crawling");
 		System.out.println("    --timeout 10000   : Timeout in milliseconds");
-		System.out.println("    --css             : Enable CSS rendering (May slow down the simpa.hit.simpa.drivergen.crawler)");
-		System.out.println("    --js              : Enable JS execution (May slow down the simpa.hit.simpa.drivergen.crawler)");
+		System.out.println("    --css             : Enable CSS rendering (May slow down the simpa.drivergen.simpa.drivergen.crawler)");
+		System.out.println("    --js              : Enable JS execution (May slow down the simpa.drivergen.simpa.drivergen.crawler)");
 		System.out.println("> General");
 		System.out.println("    --help | -h       : Show help");
 		System.out.println();

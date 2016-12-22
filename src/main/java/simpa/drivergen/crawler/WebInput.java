@@ -1,4 +1,4 @@
-package simpa.hit.crawler;
+package simpa.drivergen.crawler;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.TreeMap;
 
 import org.jsoup.nodes.Element;
-import simpa.hit.tools.Utils;
+import simpa.drivergen.tools.Utils;
 
 import com.gargoylesoftware.htmlunit.HttpMethod;
 

@@ -1,4 +1,4 @@
-package simpa.hit.crawler.page;
+package simpa.drivergen.crawler.page;
 
 import java.util.Arrays;
 import java.util.HashSet;

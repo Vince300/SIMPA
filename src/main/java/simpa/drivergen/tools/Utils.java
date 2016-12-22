@@ -1,4 +1,4 @@
-package simpa.hit.tools;
+package simpa.drivergen.tools;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -18,7 +18,8 @@ import java.util.Random;
 import java.util.Set;
 import java.util.StringTokenizer;
 
-import simpa.hit.tools.loggers.LogManager;
+import simpa.drivergen.tools.loggers.LogManager;
+import simpa.hit.tools.*;
 
 public class Utils {
 	private static Random rand = new Random();
@@ -370,6 +371,37 @@ public class Utils {
 			out.close();
 		} catch (Exception e) {
 			System.err.println("Error: " + e.getMessage());
+		}
+	}
+
+	public static List<simpa.hit.tools.HTTPData> generateCombinationOfSet(HashMap<String, ArrayList<String>> data){
+		List<simpa.hit.tools.HTTPData> comb = new ArrayList<simpa.hit.tools.HTTPData>();
+		List<String> nameList = new ArrayList<String>();
+		List<ArrayList<String>> dataList = new ArrayList<ArrayList<String>>();
+
+		for (String k : data.keySet()){
+			nameList.add(k);
+			dataList.add(data.get(k));
+		}
+
+		generateCombinationOfSetRec(comb, nameList, dataList, new ArrayList<Integer>(data.size()));
+		return comb;
+	}
+
+	private static void generateCombinationOfSetRec(List<simpa.hit.tools.HTTPData> comb,
+													List<String> nameList, List<ArrayList<String>> dataList, ArrayList<Integer> list) {
+		if (list.size() == nameList.size()){
+			simpa.hit.tools.HTTPData d = new simpa.hit.tools.HTTPData();
+			for(int i=0; i< list.size(); i++){
+				d.add(nameList.get(i), dataList.get(i).get(list.get(i)));
+			}
+			comb.add(d);
+		}else{
+			for(int i=0; i<dataList.get(list.size()).size(); i++){
+				list.add(i);
+				generateCombinationOfSetRec(comb, nameList, dataList, list);
+				list.remove(list.size()-1);
+			}
 		}
 	}
 }

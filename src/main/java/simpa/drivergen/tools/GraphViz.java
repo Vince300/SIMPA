@@ -1,10 +1,10 @@
-package simpa.hit.tools;
+package simpa.drivergen.tools;
 
 import java.io.File;
 import java.io.IOException;
 
-import simpa.hit.main.drivergen.Options;
-import simpa.hit.tools.loggers.LogManager;
+import simpa.drivergen.main.drivergen.Options;
+import simpa.drivergen.tools.loggers.LogManager;
 
 public class GraphViz {
 	private static String DOT = "dot";

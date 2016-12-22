@@ -1,4 +1,4 @@
-package simpa.hit.tools;
+package simpa.drivergen.tools;
 
 import java.util.ArrayList;
 import java.util.HashMap;

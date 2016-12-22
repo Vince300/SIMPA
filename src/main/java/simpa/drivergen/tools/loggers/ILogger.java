@@ -1,4 +1,4 @@
-package simpa.hit.tools.loggers;
+package simpa.drivergen.tools.loggers;
 
 import java.util.Map;
 

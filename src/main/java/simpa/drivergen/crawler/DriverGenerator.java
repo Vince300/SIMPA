@@ -1,4 +1,4 @@
-package simpa.hit.crawler;
+package simpa.drivergen.crawler;
 
 import java.awt.Color;
 import java.io.BufferedWriter;
@@ -29,7 +29,7 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
-import simpa.hit.main.drivergen.Options;
+import simpa.drivergen.main.drivergen.Options;
 
 import org.apache.commons.logging.LogFactory;
 import org.apache.http.auth.AuthScope;
@@ -45,10 +45,10 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.w3c.dom.Node;
 
-import simpa.hit.tools.GraphViz;
-import simpa.hit.tools.HTTPData;
-import simpa.hit.tools.Utils;
-import simpa.hit.tools.loggers.LogManager;
+import simpa.drivergen.tools.GraphViz;
+import simpa.drivergen.tools.HTTPData;
+import simpa.drivergen.tools.Utils;
+import simpa.drivergen.tools.loggers.LogManager;
 
 import com.gargoylesoftware.htmlunit.CookieManager;
 import com.gargoylesoftware.htmlunit.FailingHttpStatusCodeException;
@@ -59,7 +59,7 @@ import com.gargoylesoftware.htmlunit.WebRequest;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 import com.gargoylesoftware.htmlunit.util.Cookie;
 
-import simpa.hit.crawler.WebInput.Type;
+import simpa.drivergen.crawler.WebInput.Type;
 
 
 public class DriverGenerator {

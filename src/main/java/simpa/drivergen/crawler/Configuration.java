@@ -1,4 +1,4 @@
-package simpa.hit.crawler;
+package simpa.drivergen.crawler;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -7,8 +7,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import simpa.hit.tools.Utils;
-import simpa.hit.tools.loggers.LogManager;
+import simpa.drivergen.tools.Utils;
+import simpa.drivergen.tools.loggers.LogManager;
 
 public class Configuration {
 	private String host = null;

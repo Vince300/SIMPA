@@ -1,4 +1,4 @@
-package simpa.hit.crawler;
+package simpa.drivergen.crawler;
 
 public class WebTransition {
 	private int from;

@@ -1,0 +1,45 @@
+apply plugin: 'java'
+apply plugin: 'antlr'
+
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+
+    flatDir {
+        dirs 'lib'
+        dirs 'lib/htmlunit'
+        dirs 'lib/sipunit'
+    }
+}
+
+dependencies {
+    antlr 'org.antlr:antlr4:4.5.3'
+
+    // lib/htmlunit/htmlunit-2.11.jar
+    compile name: 'htmlunit', version: '2.11'
+    // lib/weka.jar
+    compile name: 'weka'
+    // lib/antlr-4.5.3-complete.jar
+    compile name: 'antlr', version: '4.5.3-complete'
+    // lib/sipunit/sipunit-2.0.0.jar
+    compile name: 'sipunit', version: '2.0.0'
+
+    // https://mvnrepository.com/artifact/xml-apis/xml-apis
+    compile group: 'xml-apis', name: 'xml-apis', version: '1.4.01'
+
+    // https://mvnrepository.com/artifact/commons-logging/commons-logging
+    compile group: 'commons-logging', name: 'commons-logging', version: '1.2'
+    // https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient
+    compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.2'
+    // https://mvnrepository.com/artifact/org.codehaus.jackson/jackson-core-asl
+    compile group: 'org.codehaus.jackson', name: 'jackson-core-asl', version: '1.9.13'
+    // https://mvnrepository.com/artifact/org.codehaus.jackson/jackson-mapper-asl
+    compile group: 'org.codehaus.jackson', name: 'jackson-mapper-asl', version: '1.9.13'
+    // https://mvnrepository.com/artifact/org.jsoup/jsoup
+    compile group: 'org.jsoup', name: 'jsoup', version: '1.10.1'
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.5'
+    // https://mvnrepository.com/artifact/javax.sip/jain-sip-ri
+    compile group: 'javax.sip', name: 'jain-sip-ri', version: '1.2.321'
+}

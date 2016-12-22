@@ -1,4 +1,4 @@
-package simpa.hit.crawler;
+package simpa.drivergen.crawler;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -6,7 +6,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
-import simpa.hit.crawler.page.PageTreeNode;
+import simpa.drivergen.crawler.page.PageTreeNode;
 
 
 public class WebOutput {
