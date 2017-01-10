@@ -1,9 +1,0 @@
-# Filename ;              number of frames ; number of samples per frame ; frequency of acquisition of the samples (Hz)
-
-speech.cod            ;   26 ;             1 ;                     8000
-speech.dec.bitstream  ;   26 ;             1 ;                     8000
-
-_QA_PERF_coder ;         26 	     ; 1 ;      		  8000
-_QA_PERF_decoder ;       26 	     ; 1 ;      		  8000
-_QA_PERF_coder_decoder ; 26 	     ; 1 ;      		  8000
-

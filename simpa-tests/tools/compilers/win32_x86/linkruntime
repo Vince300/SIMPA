@@ -1,3 +1,0 @@
-#!/usr/bin/env perl
-
-system("$ENV{'QA_TOOLS'}/compilers/win32_x86/link @ARGV");

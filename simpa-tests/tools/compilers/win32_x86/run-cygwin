@@ -1,6 +1,0 @@
-#!/usr/bin/env sh
-# Execute like a simulator does
-# simple case for executable in the same directory, 
-# TBD relative path or absolute path
-
-./$1

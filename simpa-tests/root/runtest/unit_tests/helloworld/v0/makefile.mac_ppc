@@ -1,5 +1,0 @@
-MAKEFILENAME = makefile.mac_ppc
-
-CC = mac_ppc
-
-include ./makefile
