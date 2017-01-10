@@ -43,3 +43,13 @@ dependencies {
     // https://mvnrepository.com/artifact/javax.sip/jain-sip-ri
     compile group: 'javax.sip', name: 'jain-sip-ri', version: '1.2.321'
 }
+
+jar {
+    manifest {
+        attributes "Main-Class": "simpa.hit.main.simpa.SIMPA"
+    }
+
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
