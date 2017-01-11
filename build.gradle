@@ -17,9 +17,6 @@ dependencies {
     // lib/sipunit/sipunit-2.0.0.jar
     compile name: 'sipunit', version: '2.0.0'
 
-    // https://mvnrepository.com/artifact/com.github.fommil.netlib/all
-    compile group: 'com.github.fommil.netlib', name: 'all', version: '1.1.2'
-
     // https://mvnrepository.com/artifact/net.sourceforge.htmlunit/htmlunit
     compile group: 'net.sourceforge.htmlunit', name: 'htmlunit', version: '2.11'
     // https://mvnrepository.com/artifact/nz.ac.waikato.cms.weka/weka-stable
@@ -51,8 +48,9 @@ jar {
     manifest {
         attributes "Main-Class": "simpa.hit.main.simpa.SIMPA"
     }
-
+    /* Disable fatjar because of a failed dependency
     from {
         configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
     }
+    */
 }
