@@ -8,26 +8,23 @@ repositories {
 
     flatDir {
         dirs 'lib'
-        dirs 'lib/htmlunit'
-        dirs 'lib/sipunit'
     }
 }
 
 dependencies {
     antlr 'org.antlr:antlr4:4.5.3'
 
-    // lib/htmlunit/htmlunit-2.11.jar
-    compile name: 'htmlunit', version: '2.11'
-    // lib/weka.jar
-    compile name: 'weka'
-    // lib/antlr-4.5.3-complete.jar
-    compile name: 'antlr', version: '4.5.3-complete'
     // lib/sipunit/sipunit-2.0.0.jar
     compile name: 'sipunit', version: '2.0.0'
 
+    // https://mvnrepository.com/artifact/net.sourceforge.htmlunit/htmlunit
+    compile group: 'net.sourceforge.htmlunit', name: 'htmlunit', version: '2.11'
+    // https://mvnrepository.com/artifact/nz.ac.waikato.cms.weka/weka-stable
+    compile group: 'nz.ac.waikato.cms.weka', name: 'weka-stable', version: '3.8.1'
+    // https://mvnrepository.com/artifact/org.antlr/antlr4
+    compile group: 'org.antlr', name: 'antlr4', version: '4.5.3'
     // https://mvnrepository.com/artifact/xml-apis/xml-apis
     compile group: 'xml-apis', name: 'xml-apis', version: '1.4.01'
-
     // https://mvnrepository.com/artifact/commons-logging/commons-logging
     compile group: 'commons-logging', name: 'commons-logging', version: '1.2'
     // https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient
@@ -42,6 +39,9 @@ dependencies {
     compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.5'
     // https://mvnrepository.com/artifact/javax.sip/jain-sip-ri
     compile group: 'javax.sip', name: 'jain-sip-ri', version: '1.2.321'
+
+    // junit testing
+    testCompile 'junit:junit:4.12'
 }
 
 jar {

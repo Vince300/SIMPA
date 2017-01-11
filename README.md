@@ -17,7 +17,7 @@ Source files have been moved around in order to conform to a standard Maven/Grad
 built using the very simple `./gradlew assemble` command.
 
 Most dependencies have been configured to be downloaded from Maven central repository, others are pulled from the *lib/*
-directory as JARs.
+directory as JARs. The only one left is sipunit, whose Maven repository is broken.
 
 All of these changes have been committed inside Git, which allows tracking what has been done exactly.
  
