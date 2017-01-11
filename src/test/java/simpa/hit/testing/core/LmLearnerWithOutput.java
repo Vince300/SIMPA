@@ -10,6 +10,11 @@ import simpa.hit.learner.mealy.table.LmLearner;
 public class LmLearnerWithOutput extends LmLearner {
     private LmConjecture lastConjecture;
 
+    /**
+     * Intercepts createConjecture calls from LmLearner to grab the reference to the last created conjecture.
+     *
+     * @return
+     */
     @Override
     public LmConjecture createConjecture() {
         return (lastConjecture = super.createConjecture());
