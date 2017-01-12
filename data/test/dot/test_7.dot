@@ -1,7 +1,13 @@
 digraph test_7 {
+    A -> A [label="a/0"];
+    A -> A [label="b/1"];
+
+    /* Equivalent to
     A -> B [label="a/0"];
     A -> A [label="b/1"];
     B -> A [label="b/1"];
     B -> A [label="a/0"];
+    */
+
     A [shape=doubleoctagon];
 }
