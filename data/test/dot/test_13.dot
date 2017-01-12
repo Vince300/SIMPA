@@ -1,3 +1,4 @@
+/* fsm w/o DS or UIOs */
 digraph test_13 {
     s0 -> s0 [label="a/0"];
     s0 -> s3 [label="b/1"];
