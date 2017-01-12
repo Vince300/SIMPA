@@ -7,7 +7,6 @@ import org.junit.Rule;
 import org.junit.rules.TestName;
 import simpa.hit.automata.mealy.Mealy;
 import simpa.hit.drivers.Driver;
-import simpa.hit.drivers.mealy.FromDotMealyDriver;
 import simpa.hit.drivers.mealy.MealyDriver;
 import simpa.hit.main.simpa.Options;
 
@@ -20,7 +19,7 @@ import java.nio.file.Paths;
  * Base class that instantiates a DotMealy driver for all of the subclass
  * test methods.
  */
-public abstract class DotDriverBasedTestClass extends MealyTestClass {
+public abstract class DotDriverBasedTestClass {
     @Rule
     public TestName name = new TestName();
 
@@ -72,6 +71,6 @@ public abstract class DotDriverBasedTestClass extends MealyTestClass {
      * @param conjecture Actual automaton to check
      */
     protected void assertEquivalence(Mealy conjecture) {
-        Assert.assertTrue("output automaton is not equivalent to input", checkEquivalence(currentAutomaton, conjecture));
+        Assert.assertTrue("output automaton is not equivalent to input", MealyUtils.checkEquivalence(currentAutomaton, conjecture));
     }
 }

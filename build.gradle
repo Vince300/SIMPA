@@ -42,6 +42,8 @@ dependencies {
 
     // junit testing
     testCompile 'junit:junit:4.12'
+    // https://mvnrepository.com/artifact/com.google.guava/guava
+    testCompile group: 'com.google.guava', name: 'guava', version: '20.0'
 }
 
 jar {
