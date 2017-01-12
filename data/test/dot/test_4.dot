@@ -1,0 +1,4 @@
+digraph test_4 {
+    A -> A [label="a/0 b/1 c/2 d/3 e/4"];
+    A [shape=doubleoctagon];
+}

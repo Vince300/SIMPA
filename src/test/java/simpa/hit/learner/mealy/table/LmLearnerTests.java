@@ -14,4 +14,84 @@ public class LmLearnerTests extends DotDriverBasedTestClass {
         lmLearner.learn();
         assertEquivalence(lmLearner.getLastConjecture());
     }
+
+    @Test
+    public void test_1() {
+        LmLearnerWithOutput lmLearner = new LmLearnerWithOutput(currentTestDriver);
+        lmLearner.learn();
+        assertEquivalence(lmLearner.getLastConjecture());
+    }
+    @Test
+    public void test_2() {
+        LmLearnerWithOutput lmLearner = new LmLearnerWithOutput(currentTestDriver);
+        lmLearner.learn();
+        assertEquivalence(lmLearner.getLastConjecture());
+    }
+    @Test
+    public void test_3() {
+        LmLearnerWithOutput lmLearner = new LmLearnerWithOutput(currentTestDriver);
+        lmLearner.learn();
+        assertEquivalence(lmLearner.getLastConjecture());
+    }
+    @Test
+    public void test_4() {
+        LmLearnerWithOutput lmLearner = new LmLearnerWithOutput(currentTestDriver);
+        lmLearner.learn();
+        assertEquivalence(lmLearner.getLastConjecture());
+    }
+    @Test
+    public void test_5() {
+        LmLearnerWithOutput lmLearner = new LmLearnerWithOutput(currentTestDriver);
+        lmLearner.learn();
+        assertEquivalence(lmLearner.getLastConjecture());
+    }
+    @Test
+    public void test_6() {
+        LmLearnerWithOutput lmLearner = new LmLearnerWithOutput(currentTestDriver);
+        lmLearner.learn();
+        assertEquivalence(lmLearner.getLastConjecture());
+    }
+    @Test
+    public void test_7() {
+        LmLearnerWithOutput lmLearner = new LmLearnerWithOutput(currentTestDriver);
+        lmLearner.learn();
+        assertEquivalence(lmLearner.getLastConjecture());
+    }
+    @Test
+    public void test_8() {
+        LmLearnerWithOutput lmLearner = new LmLearnerWithOutput(currentTestDriver);
+        lmLearner.learn();
+        assertEquivalence(lmLearner.getLastConjecture());
+    }
+    @Test
+    public void test_9() {
+        LmLearnerWithOutput lmLearner = new LmLearnerWithOutput(currentTestDriver);
+        lmLearner.learn();
+        assertEquivalence(lmLearner.getLastConjecture());
+    }
+    @Test
+    public void test_10() {
+        LmLearnerWithOutput lmLearner = new LmLearnerWithOutput(currentTestDriver);
+        lmLearner.learn();
+        assertEquivalence(lmLearner.getLastConjecture());
+    }
+    @Test
+    public void test_11() {
+        LmLearnerWithOutput lmLearner = new LmLearnerWithOutput(currentTestDriver);
+        lmLearner.learn();
+        assertEquivalence(lmLearner.getLastConjecture());
+    }
+    @Test
+    public void test_12() {
+        LmLearnerWithOutput lmLearner = new LmLearnerWithOutput(currentTestDriver);
+        lmLearner.learn();
+        assertEquivalence(lmLearner.getLastConjecture());
+    }
+    @Test
+    public void test_13() {
+        LmLearnerWithOutput lmLearner = new LmLearnerWithOutput(currentTestDriver);
+        lmLearner.learn();
+        assertEquivalence(lmLearner.getLastConjecture());
+    }
+
 }
