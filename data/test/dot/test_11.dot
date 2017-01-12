@@ -8,5 +8,5 @@ digraph test_11 {
     s2 -> s2 [label="b/1"];
     s3 -> s0 [label="a/1"];
     s3 -> s0 [label="b/0"];
-    A [shape=doubleoctagon];
+    s0 [shape=doubleoctagon];
 }
