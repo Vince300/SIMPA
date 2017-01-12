@@ -1,5 +1,7 @@
 digraph test_5 {
-    A -> B [label="a/0 b/1"];
-    B -> A [label="b/1 a/1"];
+    A -> B [label="a/0"];
+    B -> A [label="b/1"];
+    A -> B [label="b/1"];
+    B -> A [label="a/1"];
     A [shape=doubleoctagon];
 }
