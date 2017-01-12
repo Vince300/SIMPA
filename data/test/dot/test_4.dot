@@ -1,4 +1,8 @@
 digraph test_4 {
-    A -> A [label="a/0 b/1 c/2 d/3 e/4"];
+    A -> A [label="a/0"];
+    A -> A [label="b/1"];
+    A -> A [label="c/2"];
+    A -> A [label="d/3"];
+    A -> A [label="e/4"];
     A [shape=doubleoctagon];
 }
