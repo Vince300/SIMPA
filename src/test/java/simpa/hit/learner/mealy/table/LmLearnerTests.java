@@ -93,5 +93,58 @@ public class LmLearnerTests extends DotDriverBasedTestClass {
         lmLearner.learn();
         assertEquivalence(lmLearner.getLastConjecture());
     }
-
+    @Test
+    public void test_14() {
+        LmLearnerWithOutput lmLearner = new LmLearnerWithOutput(currentTestDriver);
+        lmLearner.learn();
+        assertEquivalence(lmLearner.getLastConjecture());
+    }
+    @Test
+    public void test_15() {
+        LmLearnerWithOutput lmLearner = new LmLearnerWithOutput(currentTestDriver);
+        lmLearner.learn();
+        assertEquivalence(lmLearner.getLastConjecture());
+    }
+    @Test
+    public void test_16() {
+        LmLearnerWithOutput lmLearner = new LmLearnerWithOutput(currentTestDriver);
+        lmLearner.learn();
+        assertEquivalence(lmLearner.getLastConjecture());
+    }
+    @Test
+    public void test_17() {
+        LmLearnerWithOutput lmLearner = new LmLearnerWithOutput(currentTestDriver);
+        lmLearner.learn();
+        assertEquivalence(lmLearner.getLastConjecture());
+    }
+    @Test
+    public void test_18() {
+        LmLearnerWithOutput lmLearner = new LmLearnerWithOutput(currentTestDriver);
+        lmLearner.learn();
+        assertEquivalence(lmLearner.getLastConjecture());
+    }
+    @Test
+    public void test_19() {
+        LmLearnerWithOutput lmLearner = new LmLearnerWithOutput(currentTestDriver);
+        lmLearner.learn();
+        assertEquivalence(lmLearner.getLastConjecture());
+    }
+    @Test
+    public void test_20() {
+        LmLearnerWithOutput lmLearner = new LmLearnerWithOutput(currentTestDriver);
+        lmLearner.learn();
+        assertEquivalence(lmLearner.getLastConjecture());
+    }
+    @Test
+    public void test_21() {
+        LmLearnerWithOutput lmLearner = new LmLearnerWithOutput(currentTestDriver);
+        lmLearner.learn();
+        assertEquivalence(lmLearner.getLastConjecture());
+    }
+    @Test
+    public void test_22() {
+        LmLearnerWithOutput lmLearner = new LmLearnerWithOutput(currentTestDriver);
+        lmLearner.learn();
+        assertEquivalence(lmLearner.getLastConjecture());
+    }
 }
