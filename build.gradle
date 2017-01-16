@@ -48,7 +48,7 @@ dependencies {
 
 jar {
     manifest {
-        attributes "Main-Class": "simpa.hit.main.simpa.SIMPA"
+        attributes "Main-Class": "main.simpa.SIMPA"
     }
     /* Disable fatjar because of a failed dependency
     from {

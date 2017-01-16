@@ -50,7 +50,7 @@ systèmes réels) qu'ensuite si vous en avez le temps.
 Pour cela, créez des automates sous format .dot de GraphViz, et utilisez le driver transparent FromDotMealyDriver qui
 simule cet automate. Par exemple, exécutez la commande :
 
-    java -jar SIMPA-1.0-SNAPSHOT.jar simpa.hit.drivers.mealy.transparent.FromDotMealyDriver --loadDotFile -- --
+    java -jar SIMPA-1.0-SNAPSHOT.jar drivers.mealy.transparent.FromDotMealyDriver --loadDotFile -- --
 
 Les algorithmes applicables au cas Mealy sont :
 * lm

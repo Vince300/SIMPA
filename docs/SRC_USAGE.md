@@ -12,7 +12,7 @@
   - **XText** is needed by ANTLR 4. ***Only version 2.7.3 of Xtext works with ANTLR 4***. The Xtext versions 2.8.0 to 2.10.0 fail. Documentation for installation is at http://www.eclipse.org/Xtext/download.html. Don't forget to uncheck "show only the latest version".
   - **ANTLR** (ANother Tool for Language Recognition) is used for the compilation of .g4 files containing the grammar to generate a parser. SIMPA use ANTLR to analyse .dot file and import into SIMPA. Install ANTLR 4 IDE, ***Go to Help*** > ***Eclipse Marketplace*** and search for antlr. Choose ***ANTLR 4 IDE*** (make sure it's ANTLR 4 IDE not ANTLR IDE) and click Install. Let the installer finish clicking ok if it prompts and restart Eclipse.
 - You can use the ***Import Wizard*** to  command link import an existing project into workspace.
-  - From the simpa.hit.main menu bar, select  command link ***File*** > ***Import***.... The Import wizard opens.
+  - From the main menu bar, select  command link ***File*** > ***Import***.... The Import wizard opens.
   - Select ***General*** > ***Existing Project into Workspace*** and click Next.
   - Choose ***Select root directory***  and click the associated **Browse** to locate the directory ***simpa-clean***.
   - Under ***simpa-clean*** select the project or projects which you would like to import.
@@ -32,7 +32,7 @@ If you are getting a problem like (`The method getTextContent() is undefined for
 	          --help | -h   : Show help
 	          --seed        : Use NN as seed for random generator
 	          --loadDotFile : load the specified dot file
-	                           use with simpa.hit.drivers.mealy.FromDotMealyDriver
+	                           use with drivers.mealy.FromDotMealyDriver
 	          --interactive : algorithms may ask user to choose a sequence, a counter example or something else
 	  > Inference Algorithm
 	          --tree             : Use tree inference (if available) instead of table
@@ -40,7 +40,7 @@ If you are getting a problem like (`The method getTextContent() is undefined for
 	          --noReset          : use noReset Algorithm
 	          --cutCombinatorial : use the combinatorial inference with cutting
 	          --combinatorial    : use the combinatorial inference
-	          --rivestSchapire   : use the RivestSchapire inference (must be used with an other simpa.hit.learner)
+	          --rivestSchapire   : use the RivestSchapire inference (must be used with an other learner)
 	                               This option let you to run an inference algorithm with resets on a driver without reset.
 	  > Algorithm ZQ
 	          --stopatce         : Stop inference when a counter exemple is asked
@@ -83,7 +83,7 @@ If you are getting a problem like (`The method getTextContent() is undefined for
 	  > Stats
 	          --nbtest (1) : number of execution of the algorithm
 	          --makeGraph  : create graph based on csv files
-	          --simpa.hit.stats      : enable simpa.hit.stats mode
+	          --stats      : enable stats mode
 	                          - save results to csv
 	                          - disable some feature
 	  > Test EFSM (should be group with random Generator ?)
@@ -95,24 +95,24 @@ If you are getting a problem like (`The method getTextContent() is undefined for
 	          --ndvmintrans  (1) : Minimum number of states before checking NDV value
 	          --ndvmaxtrans  (1) : Maximum number of states before checking NDV value
 
-	  Ex: SIMPA simpa.hit.drivers.efsm.NSPKDriver --outdir mydir --text
+	  Ex: SIMPA drivers.efsm.NSPKDriver --outdir mydir --text
 
 ### o Detailed Instructions for Command Line Arguments in Eclipse
 
 - Right-click on your project **simpa-clean**.
 - Go to **Debug As > Java Application** or **Run As > Java Application**.
-- Find the class *SIMPA (simpa.hit.main.simpa)*.
+- Find the class *SIMPA (main.simpa)*.
 - Go to **Debug As > Debug Configurations** or **Run As > Run Configurations**, and then click that says **Arguments**.
 - Enter in your **Program Arguments**
 - Click **Apply** or **Debug**
 
-There are some simpa.hit.examples for **Program Arguments** :
+There are some examples for **Program Arguments** :
 
-	simpa.hit.drivers.mealy.SFM11StefenDriver --lm --html --text
+	drivers.mealy.SFM11StefenDriver --lm --html --text
 
-	simpa.hit.drivers.mealy.FromDotMealyDriver --lm --html --text --loadDotFile /Documents/workspace/DotParser/test2.dot --outdir /SIMPA_out
+	drivers.mealy.FromDotMealyDriver --lm --html --text --loadDotFile /Documents/workspace/DotParser/test2.dot --outdir /SIMPA_out
 
-	simpa.hit.drivers.mealy.transparent.RandomAndCounterMealyDriver --noReset --minstates 2 --maxstates 2 --mininputsym 2 --minoutputsym 2 --maxinputsym 2 --maxoutputsym 3 --seed 5 --nbtest 5 --simpa.hit.stats --makeGraph --noSpeedUp
+	drivers.mealy.transparent.RandomAndCounterMealyDriver --noReset --minstates 2 --maxstates 2 --mininputsym 2 --minoutputsym 2 --maxinputsym 2 --maxoutputsym 3 --seed 5 --nbtest 5 --stats --makeGraph --noSpeedUp
 
 
 
@@ -143,7 +143,7 @@ There are some simpa.hit.examples for **Program Arguments** :
   	cd $SIMPA/hit/src
   	javac -g -d ../bin  */*.java */*/*.java */*/*/*.java */*/*/*/*.java */*/*/*/*/*.java
 
-- **Run simpa.hit.examples**
+- **Run examples**
 
   The Class files have been generated in the bin/ directory.
 
@@ -151,18 +151,18 @@ There are some simpa.hit.examples for **Program Arguments** :
 
     	cd $SIMPA/hit/bin
     	rm -f out/*
-    	java simpa.hit.main.simpa.SIMPA simpa.hit.drivers.mealy.SFM11StefenDriver --lm --html --text
+    	java main.simpa.SIMPA drivers.mealy.SFM11StefenDriver --lm --html --text
 
   - Launching the executable file from another directory
     	export CLASSPATH="$SIMPA/hit/bin:$CLASSPATH"
     	rm -f out/*
-    	java simpa.hit.main.simpa.SIMPA simpa.hit.drivers.mealy.SFM11StefenDriver --lm --html --text
+    	java main.simpa.SIMPA drivers.mealy.SFM11StefenDriver --lm --html --text
 
   - Output
 
     	SIMPA - 06/23/2016
     	Checking environment and options
-    	you can try to do this learning again by running something like 'java simpa.hit.main.simpa.SIMPA simpa.hit.drivers.mealy.SFM11StefenDriver --lm --html --text --seed 1977387548829879471 '
+    	you can try to do this learning again by running something like 'java main.simpa.SIMPA drivers.mealy.SFM11StefenDriver --lm --html --text --seed 1977387548829879471 '
     	System : SFM11Stefen
     	Inferring the system
     	Building the conjecture
