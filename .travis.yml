@@ -15,3 +15,5 @@ before_install:
 script:
   - ./gradlew assemble
   - ./gradlew check --info
+  - ./gradlew jacocoTestReport
+  - bash <(curl -s https://codecov.io/bash)

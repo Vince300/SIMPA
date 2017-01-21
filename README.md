@@ -1,4 +1,4 @@
-# SIMPA legacy software testing project [![Build Status](https://travis-ci.org/Vince300/SIMPA.svg?branch=master)](https://travis-ci.org/Vince300/SIMPA)
+# SIMPA legacy software testing project [![Build Status](https://travis-ci.org/Vince300/SIMPA.svg?branch=master)](https://travis-ci.org/Vince300/SIMPA) [![codecov](https://codecov.io/gh/Vince300/SIMPA/branch/master/graph/badge.svg)](https://codecov.io/gh/Vince300/SIMPA)
 
 ## Getting started
 

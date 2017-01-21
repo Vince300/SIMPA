@@ -1,5 +1,6 @@
 apply plugin: 'java'
 apply plugin: 'antlr'
+apply plugin: 'jacoco'
 
 version '1.0-SNAPSHOT'
 
@@ -57,4 +58,11 @@ jar {
         configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
     }
     */
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+        html.enabled false
+    }
 }
