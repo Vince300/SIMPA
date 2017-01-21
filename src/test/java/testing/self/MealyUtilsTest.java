@@ -23,7 +23,7 @@ public class MealyUtilsTest extends MealyGraphTestClass {
      */
     @Test
     public void helloWorld() {
-        Assert.assertTrue(MealyUtils.checkEquality(getCurrentAutomaton(), getCurrentAutomaton()));
+        Assert.assertTrue(new MealyUtils().checkEquality(getCurrentAutomaton(), getCurrentAutomaton()));
     }
 
     /**
@@ -31,6 +31,6 @@ public class MealyUtilsTest extends MealyGraphTestClass {
      */
     @Test
     public void noInitialState() throws IOException {
-        Assert.assertTrue(MealyUtils.checkEquality(getCurrentAutomaton(), getCurrentAutomaton()));
+        Assert.assertTrue(new MealyUtils().checkEquality(getCurrentAutomaton(), getCurrentAutomaton()));
     }
 }

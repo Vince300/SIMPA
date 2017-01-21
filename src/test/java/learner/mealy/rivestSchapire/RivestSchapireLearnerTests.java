@@ -31,13 +31,15 @@ public class RivestSchapireLearnerTests extends DotDriverBasedTestClass {
      */
     @Test()
     public void runTest() {
-        RivestSchapireLearnerWithOutput RivestSchapireLearner = new RivestSchapireLearnerWithOutput(currentTestDriver);
-        RivestSchapireLearner.learn();
-        assertEquivalence(RivestSchapireLearner.getLastConjecture());
+        RivestSchapireLearnerWithOutput learner = new RivestSchapireLearnerWithOutput(currentTestDriver);
+        learner.learn();
+        assertEquivalence(learner.getLastConjecture());
     }
 
     @Override
     public void testInitialize() throws IOException {
+        initializeOptions(getTestPath());
+
         // Load the automaton
         setCurrentAutomaton(loadAutomatonFromFile(graphFile));
 

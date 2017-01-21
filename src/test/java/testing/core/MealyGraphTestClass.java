@@ -150,6 +150,6 @@ public abstract class MealyGraphTestClass {
      * @param conjecture Actual automaton to check
      */
     protected void assertEquivalence(Mealy conjecture) {
-        Assert.assertTrue("output automaton is not equivalent to input", MealyUtils.checkEquivalence(currentAutomaton, conjecture));
+        Assert.assertTrue("output automaton is not equivalent to input", new MealyUtils().checkEquivalence(currentAutomaton, conjecture));
     }
 }

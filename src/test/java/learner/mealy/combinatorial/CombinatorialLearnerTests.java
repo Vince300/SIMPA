@@ -41,6 +41,8 @@ public class CombinatorialLearnerTests extends DotDriverBasedTestClass {
 
     @Override
     public void testInitialize() throws IOException {
+        initializeOptions(getTestPath());
+
         // Load the automaton
         setCurrentAutomaton(loadAutomatonFromFile(graphFile));
 
