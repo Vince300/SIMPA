@@ -60,6 +60,21 @@ assumptions:
 * The input automaton has the minimal number of states
 * The algorithm always guesses an automaton with the least states possible
 
+### Using IntelliJ IDEA
+
+We advise using IntelliJ IDEA in order to run the tests (using the integrated test runner is faster than the one used
+by gradle), but this also allows re-executing failed tests. In order to do so, create the following run configuration:
+
+![Tst configuration for IntelliJ IDEA](debug_config.png)
+
+Then, once you have run the test, you can chose which case you would like to execute again, or even run in the debugger:
+
+![Re-run a failed test case](failed_case.png)
+
+*Note: we assume here the project has been properly imported through the **Import project** feature, and picking the
+gradle build file.* 
+
+
 ## Bugs found
 
 The following bugs have been found as part of our testing of the learning algorithms. They have not been fixed in order
