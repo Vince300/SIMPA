@@ -1,4 +1,4 @@
 digraph noInitialState {
-    A -> B [label="1/a"];
     B -> A [label="1/b"];
+    A -> B [label="1/a"];
 }

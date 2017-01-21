@@ -33,4 +33,13 @@ public class MealyUtilsTest extends MealyGraphTestClass {
     public void noInitialState() throws IOException {
         Assert.assertTrue(new MealyUtils().checkEquality(getCurrentAutomaton(), getCurrentAutomaton()));
     }
+
+    /**
+     * Test automaton equality when one has no initial state
+     */
+    @Test
+    public void initialStateIndependentEquality() throws IOException {
+        Assert.assertTrue(new MealyUtils().checkEquality(loadNamedAutomaton(getTestPath(), "helloWorld"),
+                loadNamedAutomaton(getTestPath(), "noInitialState")));
+    }
 }
