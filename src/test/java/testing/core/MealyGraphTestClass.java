@@ -71,13 +71,21 @@ public abstract class MealyGraphTestClass {
      */
     @Before
     public void testInitialize() throws IOException {
-        Path testFolder = getDefaultTestPath();
+        Path testFolder = getTestPath();
 
         // Initialize options
         initializeOptions(testFolder);
 
         // Load current automaton
         currentAutomaton = loadNamedAutomaton(testFolder, name.getMethodName());
+    }
+
+    /**
+     * Returns the test path for the current suite.
+     * @return
+     */
+    protected Path getTestPath() {
+        return getDefaultTestPath();
     }
 
     /**

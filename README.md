@@ -1,12 +1,18 @@
 # SIMPA legacy software testing project [![Build Status](https://travis-ci.org/Vince300/SIMPA.svg?branch=master)](https://travis-ci.org/Vince300/SIMPA)
 
-## Building the project
+## Getting started
 
-    ./gradlew assemble
+```bash
+# Building the project
+./gradlew assemble
+
+# Running the tests
+./gradlew check --info
+```
 
 ## Development environment
 
-Tested using JDK 8 with IntelliJ Idea.
+Tested using JDK 8. Developed and debugged in IntelliJ Idea 2016.
 
 ## Changes from the original source
 
@@ -20,13 +26,11 @@ Most dependencies have been configured to be downloaded from Maven central repos
 directory as JARs. The only one left is sipunit, whose Maven repository is broken.
 
 All of these changes have been committed inside Git, which allows tracking what has been done exactly.
- 
-## Assignment details
 
-See [ASSIGNMENT.md](docs/ASSIGNMENT.md)
+## Docs
 
-## SIMPA tool usage
+### [Assignment details](docs/ASSIGNMENT.md)
 
-See [SRC_USAGE.md](docs/SRC_USAGE.md)
+### [SIMPA tool usage](docs/SIMPA_USAGE.md)
 
-_Note: usage instructions will be updated in order to provide a quick-start guide._
+### [Testing report](docs/TESTING_REPORT.md)

@@ -6,12 +6,18 @@ import testing.core.MealyGraphTestClass;
 import testing.core.MealyUtils;
 
 import java.io.IOException;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 
 /**
  * A test class to validate the functionality provided by {@link MealyUtils}
  */
 public class MealyUtilsTest extends MealyGraphTestClass {
+    @Override
+    protected Path getTestPath() {
+        return Paths.get("data", "test", "utils");
+    }
+
     /**
      * Basic test: an automaton is equal to itself
      */
@@ -25,7 +31,6 @@ public class MealyUtilsTest extends MealyGraphTestClass {
      */
     @Test
     public void noInitialState() throws IOException {
-        setCurrentAutomaton(loadNamedAutomaton(Paths.get("data", "test", "misc"), "noInitialState"));
         Assert.assertTrue(MealyUtils.checkEquality(getCurrentAutomaton(), getCurrentAutomaton()));
     }
 }
