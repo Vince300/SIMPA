@@ -41,6 +41,15 @@ public abstract class MealyGraphTestClass {
     }
 
     /**
+     * Sets the current automaton for testing
+     *
+     * @param currentAutomaton
+     */
+    public void setCurrentAutomaton(Mealy currentAutomaton) {
+        this.currentAutomaton = currentAutomaton;
+    }
+
+    /**
      * Checks graphviz is installed before running the test suite.
      */
     @BeforeClass
@@ -62,12 +71,31 @@ public abstract class MealyGraphTestClass {
      */
     @Before
     public void testInitialize() throws IOException {
-        // Setup minimal options
-        Options.OUTDIR = Paths.get("data", "test").toString() + File.separator;
-        Options.DIRGRAPH = "dot";
+        Path testFolder = getDefaultTestPath();
+
+        // Initialize options
+        initializeOptions(testFolder);
 
         // Load current automaton
-        currentAutomaton = loadNamedAutomaton(name.getMethodName());
+        currentAutomaton = loadNamedAutomaton(testFolder, name.getMethodName());
+    }
+
+    /**
+     * Get the path to the default test folder.
+     * @return
+     */
+    public static Path getDefaultTestPath() {
+        return Paths.get("data", "test", "dot");
+    }
+
+    /**
+     * Initializes default options for algorithms.
+     * @param testFolder Root folder for testing output
+     */
+    protected void initializeOptions(Path testFolder) {
+        // Setup minimal options
+        Options.OUTDIR = testFolder.getParent().toString() + File.separator;
+        Options.DIRGRAPH = testFolder.getFileName().toString();
     }
 
     /**
@@ -79,22 +107,33 @@ public abstract class MealyGraphTestClass {
     }
 
     /**
-     * Loads an automaton by its name from the data/test/dot folder
+     * Loads an automaton by its name from the given folder
      *
      * @param name
      * @return
      * @throws IOException
      */
-    protected Mealy loadNamedAutomaton(String name) throws IOException {
+    protected Mealy loadNamedAutomaton(Path sourceFolder, String name) throws IOException {
         // Path to the test file
-        Path dotFilePath = Paths.get("data", "test", "dot", name + ".dot");
+        Path dotFilePath = Paths.get(sourceFolder.toString(), name + ".dot");
 
         // Load the automaton, if it exists
         File dotFile = dotFilePath.toFile();
 
         if (dotFile.exists())
-            return Mealy.importFromDot(dotFile);
+            return loadAutomatonFromFile(dotFile);
         return null;
+    }
+
+    /**
+     * Loads an automaton from a file
+     *
+     * @param file
+     * @return
+     * @throws IOException
+     */
+    protected Mealy loadAutomatonFromFile(File file) throws IOException {
+        return Mealy.importFromDot(file);
     }
 
     /**

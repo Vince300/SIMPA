@@ -1,8 +1,7 @@
-package testing.core;
+package learner.mealy.table;
 
 import drivers.Driver;
 import learner.mealy.LmConjecture;
-import learner.mealy.table.LmLearner;
 
 /**
  * An LmLearner that is capable of remembering its last conjecture (the one that will be output to dot).
