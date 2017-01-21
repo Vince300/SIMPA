@@ -12,3 +12,6 @@ cache:
 before_install:
   - sudo apt-get -qq update
   - sudo apt-get install -y graphviz
+script:
+  - ./gradlew assemble
+  - ./gradlew check --info
