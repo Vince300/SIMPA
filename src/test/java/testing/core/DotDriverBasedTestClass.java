@@ -17,7 +17,7 @@ import java.util.ArrayList;
  */
 public abstract class DotDriverBasedTestClass extends MealyGraphTestClass {
     // The driver for the currently running test
-    protected Driver currentTestDriver;
+    protected MealyDriver currentTestDriver;
 
     /**
      * Finds all input .dot files in a directory.

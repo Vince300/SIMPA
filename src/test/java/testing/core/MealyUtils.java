@@ -181,7 +181,14 @@ public final class MealyUtils {
      */
     private static BiMap<String, String> buildStateMap(Mealy automaton) {
         BiMap<String, String> stateMap = HashBiMap.create(automaton.getStateCount());
-        buildStateMap(stateMap, automaton, automaton.getInitialState(), 0);
+
+        State currentState = automaton.getInitialState();
+
+        if (currentState == null && automaton.getStateCount() > 0) {
+            currentState = automaton.getStates().get(0);
+        }
+
+        buildStateMap(stateMap, automaton, currentState, 0);
         return stateMap;
     }
 
