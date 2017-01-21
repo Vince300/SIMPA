@@ -35,7 +35,9 @@ public abstract class DotDriverBasedTestClass extends MealyGraphTestClass {
                     findTestCases(f.toPath(), testCases);
                 } else {
                     String fpath = f.getPath();
-                    if (fpath.endsWith(".dot") && !fpath.endsWith("_inf.dot")) {
+                    if (fpath.endsWith(".dot")
+                            && !fpath.endsWith("_inf.dot")
+                            && !f.toPath().getFileName().toString().startsWith("Vtree")) {
                         // Only add .dot files without a skip file
                         if (!(new File(fpath + ".skip")).exists())
                             testCases.add(f);
