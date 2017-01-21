@@ -1,19 +1,24 @@
 language: java
 jdk:
-  - oraclejdk8
+- oraclejdk8
 sudo: required
 before_cache:
-  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
-  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+- rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -fr $HOME/.gradle/caches/*/plugin-resolution/
 cache:
   directories:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
+  - "$HOME/.gradle/caches/"
+  - "$HOME/.gradle/wrapper/"
 before_install:
-  - sudo apt-get -qq update
-  - sudo apt-get install -y graphviz
+- sudo apt-get -qq update
+- sudo apt-get install -y graphviz
 script:
-  - ./gradlew assemble
-  - ./gradlew check --info
-  - ./gradlew jacocoTestReport
-  - bash <(curl -s https://codecov.io/bash)
+- "./gradlew assemble"
+- "./gradlew check --info"
+- "./gradlew jacocoTestReport"
+- bash <(curl -s https://codecov.io/bash)
+- "./gradlew sonarqube"
+addons:
+  sonarqube:
+    token:
+      secure: qv5WIM4xjpavq0VU7lA6VpFI9bBmpiywRTc2H688clttwG9rQ/0QD7B/eZqpGBk4G/cXFWNewOk/54n9rnp9Zs68pVPBZDssWHzmFF3jCzl/UcNrc7w1Y2Hnu4GXDA54+o6D/04TbM90abYfB9bf3bp0pWa63BV25ErFEckNgMmTHicC0WJqXut+D0iRIIiDKwHHplA86kkiCJtBaaH/TVAvsaWQkowu6iwZnHohkk2qOXHaHlThzse5dcA+WoY3hKdR1PlFKvEPcJu2crimLsQfTbS//AdKjNFAxJclHgIN3g/PqIYQWtzooicFwoP4o59+jHQ4OKEE5LurF08oQzHqAP8NlqtKMHtYzLiPxLoMqw1NtRIrFBnf+FjIWB953wFodAurfBe7Zw+9HOzyYfRXz5EntrNNuV9eSt5t9ammVdOs3SRHbJbVIGMxo8zOp3vrq7WXESOsxsVLrx3lLTyc1pwFco12NDSOuOalL+8SyIFB84DZXM3k48uo0JxM9lGZH5io0iyP9MOz8id3fTOvyb15hRPF73d19tONNkEwUlqxtSVabsSa9XPErvDA0aEy7uVvq/EekK+fEhJ2YPwPimWmJwXYi3gf2MBxTpIjUmCqcISAzqvei3no0ipyRWDry0jDoXCvB9x9o2wQHote8Ej4nped0QaPqLUNE6Q=
