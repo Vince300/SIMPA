@@ -1,0 +1,32 @@
+digraph graph_045 {
+	s00 -> s05 [label="a/1"];
+	s00 -> s13 [label="b/1"];
+	s01 -> s19 [label="a/1"];
+	s01 -> s18 [label="b/1"];
+	s02 -> s08 [label="a/1"];
+	s02 -> s09 [label="b/1"];
+	s03 -> s06 [label="a/0"];
+	s04 -> s01 [label="a/0"];
+	s04 -> s09 [label="b/0"];
+	s05 -> s07 [label="a/0"];
+	s07 -> s12 [label="a/1"];
+	s07 -> s13 [label="b/1"];
+	s09 -> s03 [label="a/0"];
+	s10 -> s16 [label="a/1"];
+	s10 -> s02 [label="b/1"];
+	s10 -> s04 [label="c/0"];
+	s11 -> s11 [label="a/0"];
+	s12 -> s10 [label="a/1"];
+	s12 -> s14 [label="b/1"];
+	s12 -> s13 [label="c/0"];
+	s12 -> s08 [label="d/0"];
+	s12 -> s01 [label="e/0"];
+	s16 -> s17 [label="a/0"];
+	s17 -> s11 [label="a/1"];
+	s17 -> s06 [label="b/1"];
+	s18 -> s19 [label="a/0"];
+	s19 -> s12 [label="a/0"];
+	s19 -> s06 [label="b/1"];
+	s19 -> s15 [label="c/1"];
+	s00 [shape=doubleoctagon];
+}
