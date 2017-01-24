@@ -1,7 +1,7 @@
 //Automates in which all vertices are reachable from the starting point (vertex s0)
 //
-//g++ -std=c++11 -o test test.cpp
-//./test 10 20 5 0.2 auto 
+//g++ -std=c++11 -o generate_digraph generate_digraph.cpp
+//./generate_digraph 50 20 5 0.2 graph_
 //10 automates with 20 vertices with 5 edge attempts with 0.2 probability each in files named auto***.dot
 //argv[1] = [1,999]
 //argv[2] = [1,99]
