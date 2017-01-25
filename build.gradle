@@ -16,6 +16,13 @@ repositories {
     }
 }
 
+test {
+    reports {
+        junitXml.enabled = false
+        html.enabled = true
+    }
+}
+
 dependencies {
     antlr 'org.antlr:antlr4:4.5.3'
 
