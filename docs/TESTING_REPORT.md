@@ -128,3 +128,76 @@ Only the resulting conjecture should be exported to dot.
 #### Applied fix
 
 Disabled the exportToDot method.
+
+
+### LmLearnerTests
+
+----
+### Error #1
+#### Test
+/data/test/dot/test_13.dot
+
+| Expected | Infered |
+| -------- | ------- |
+| ![test_13.svg](pics/test_13.svg) | ![test_13_inf.svg](pics/test_13_inf.svg) |
+
+#### Comments 
+* fsm without DS or UIOs
+* fsm has a W-set
+* infered fsm
+
+----
+### Error #2
+#### Test 
+/data/test/dot/test_16.dot
+
+| Expected | Infered |
+| -------- | ------- |
+| ![test_16.svg](pics/test_16.svg) | ![test_16_inf.svg](pics/test_16_inf.svg) |
+
+#### Comments 
+* AssertionError
+* possibly related with errors #3 #4 #5
+
+#### /data/test/dot/test_16.dot
+
+
+----
+### Error #3
+#### Test
+/data/test/dot/test_17.dot
+
+| Expected | Infered |
+| -------- | ------- |
+| ![test_16.svg](pics/test_16.svg) | ![test_16_inf.svg](pics/test_16_inf.svg) |
+
+#### Comments
+* AssertionError
+* possibly related with errors #3 #4 #5
+
+----
+### Error #4
+#### Test
+/data/test/dot/test_18.dot
+
+| Expected | Infered |
+| -------- | ------- |
+| ![test_18.svg](pics/test_18.svg) | ![test_18_inf.svg](pics/test_18_inf.svg) |
+
+#### Comments
+* AssertionError
+* possibly related with errors #3 #4 #5
+
+----
+### Error #5
+#### Test
+/data/test/dot/test_26.dot
+
+| Expected | Infered |
+| -------- | ------- |
+| ![test_26.svg](pics/test_26.svg) | ![test_26_inf.svg](pics/test_26_inf.svg) |
+
+#### Comments
+* AssertionError
+* possibly related with errors #3 #4 #5
+
