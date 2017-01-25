@@ -29,7 +29,7 @@ public class LmLearnerTests extends DotDriverBasedTestClass {
     /**
      * Runs a test for a given automaton from the initialized context
      */
-    @Test()
+    @Test(timeout=5000)
     public void runTest() {
         LmLearnerWithOutput lmLearner = new LmLearnerWithOutput(currentTestDriver);
         lmLearner.learn();
