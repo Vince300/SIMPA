@@ -52,7 +52,7 @@ public abstract class MealyGraphTestClass {
     /**
      * Checks graphviz is installed before running the test suite.
      */
-    @BeforeClass
+    // @BeforeClass
     public static void checkPrerequisites() {
         try {
             Process p = Runtime.getRuntime().exec(new String[]{"dot", "-V"});
@@ -104,6 +104,7 @@ public abstract class MealyGraphTestClass {
         // Setup minimal options
         Options.OUTDIR = testFolder.getParent().toString() + File.separator;
         Options.DIRGRAPH = testFolder.getFileName().toString();
+        Options.GRAPHVIZ = false;
     }
 
     /**
