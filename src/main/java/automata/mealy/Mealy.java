@@ -87,7 +87,7 @@ public class Mealy extends Automata implements Serializable {
 	}
 
 	public void exportToDot() {
-		Writer writer = null;
+		/*Writer writer = null;
 		File file = null;
 		File dir = new File(Options.OUTDIR + Options.DIRGRAPH);
 		try {
@@ -113,7 +113,7 @@ public class Mealy extends Automata implements Serializable {
 				LogManager.logImage(imagePath.getPath());
 		} catch (IOException e) {
 			LogManager.logException("Error writing dot file", e);
-		}
+		}*/
 	}
 
 	public OutputSequence apply(InputSequence I, State s) {

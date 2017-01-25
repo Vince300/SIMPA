@@ -7,7 +7,7 @@ matter, we are not doing system-wide tests of the toolkit, as testing command-li
 a very slow and tedious process.
 
 This means we are actually doing gray-box testing. Source code in the `src/main/java/hit` folder hasn't been changed
-(excepted for the package name in the Antlr4 grammar). Our test cases (`src/test/java`) are instead compiled as part of
+excepted for the changes mentioned below. Our test cases (`src/test/java`) are instead compiled as part of
 the `gradle check` task, which means they can inherit learner algorithms in order to introspect data. Directly
 extracting inferred automatons from the learner classes is also way more efficient than re-parsing the dot file from the
 file system, and doesn't reduce the value of the test.
@@ -15,6 +15,11 @@ file system, and doesn't reduce the value of the test.
 Our main objective is reusability: test cases for an algorithm should be reusable for another algorithm without any
 changes outside of the class name of the Learner algorithm. As said before, our testing architecture is also focused on
 speed, because a fast test suite is useful in finding and fixing bugs ([F.I.R.S.T Principles of Unit Testing](https://github.com/ghsukumar/SFDC_Best_Practices/wiki/F.I.R.S.T-Principles-of-Unit-Testing)).
+
+## Code changes
+
+* Added package name in the Antlr4 grammar
+* Removed calls to `exportToDot` when creating conjectures
 
 ## Testing code architecture
 
@@ -98,3 +103,28 @@ A `java.lang.NullPointerException` is thrown.
 #### Suggested fix
 
 Change the grammar to make the title mandatory, or add a check for null title and throw a specialized exception.
+
+### createConjecture exports a dot file every time
+
+* Java test: all learner tests
+* Dot test: all dot tests
+* Method: any learner, sometimes `createConjecture`, sometimes a call to
+`exportToDot`
+
+#### Expected behavior
+
+Only the resulting conjecture should be exported to dot.
+
+#### Actual behavior
+
+`exportToDot` is called on every computed conjecture, therefore slowing down computing and testing.
+
+#### Suggested fix
+
+* Add an option to disable export on every computed conjecture.
+* Make exporting consistent (inside or outside of `createConjecture` methods)
+* Do not overwrite previous exports
+
+#### Applied fix
+
+Disabled the exportToDot method.
