@@ -1,6 +1,5 @@
 package testing.core;
 
-import drivers.Driver;
 import drivers.mealy.MealyDriver;
 import org.apache.log4j.ConsoleAppender;
 import org.apache.log4j.Logger;

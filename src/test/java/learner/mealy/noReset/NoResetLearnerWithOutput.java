@@ -1,6 +1,5 @@
 package learner.mealy.noReset;
 
-import drivers.Driver;
 import drivers.mealy.MealyDriver;
 import learner.mealy.LmConjecture;
 import learner.mealy.noReset.dataManager.DataManager;

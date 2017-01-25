@@ -1,6 +1,5 @@
 package learner.mealy.noReset;
 
-import drivers.mealy.MealyDriver;
 import drivers.mealy.transparent.TransparentMealyDriver;
 import org.junit.Test;
 import org.junit.runner.RunWith;
