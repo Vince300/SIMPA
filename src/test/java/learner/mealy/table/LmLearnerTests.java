@@ -19,17 +19,18 @@ public class LmLearnerTests extends DotDriverBasedTestClass {
 
     /**
      * Builds the test suite
+     * Excludes "graph_*" tests because they are too slow
      * @return
      */
     @Parameterized.Parameters(name = "{1}")
     public static Collection<Object[]> suite() {
-        return buildSuite(getDefaultTestPath());
+        return buildSuite(getDefaultTestPath(), "graph_");
     }
 
     /**
      * Runs a test for a given automaton from the initialized context
      */
-    @Test(timeout=5000)
+    @Test()
     public void runTest() {
         LmLearnerWithOutput lmLearner = new LmLearnerWithOutput(currentTestDriver);
         lmLearner.learn();

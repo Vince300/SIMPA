@@ -48,11 +48,24 @@ public abstract class DotDriverBasedTestClass extends MealyGraphTestClass {
 
     /**
      * Builds a test suite from the .dot files found in the specified directory.
+     *
      * @param rootDirectory The directory to be scanned for files
      * @return A list of arrays which contain each a File instance pointing to the
-     *         corresponding test case, and a String which can be used as the test name.
+     * corresponding test case, and a String which can be used as the test name.
      */
     protected static ArrayList<Object[]> buildSuite(Path rootDirectory) {
+        return buildSuite(rootDirectory, null);
+    }
+
+    /**
+     * Builds a test suite from the .dot files found in the specified directory.
+     *
+     * @param rootDirectory The directory to be scanned for files
+     * @param exclude Pattern to exclude, or null
+     * @return A list of arrays which contain each a File instance pointing to the
+     * corresponding test case, and a String which can be used as the test name.
+     */
+    protected static ArrayList<Object[]> buildSuite(Path rootDirectory, String exclude) {
         ArrayList<Object[]> tests = new ArrayList<>();
 
         // Set root log4j to console and debug
@@ -64,7 +77,8 @@ public abstract class DotDriverBasedTestClass extends MealyGraphTestClass {
 
         // Create test cases
         for (File file : testCases) {
-            tests.add(new Object[] { file, rootDirectory.relativize(file.toPath()).toString() });
+            if (exclude == null || !file.getPath().contains(exclude))
+                tests.add(new Object[]{file, rootDirectory.relativize(file.toPath()).toString()});
         }
         return tests;
     }
